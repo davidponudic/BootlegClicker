@@ -56,9 +56,9 @@
             this.tooltip1 = new System.Windows.Forms.ToolTip(this.components);
             this.lblLoveValue = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBuyLootBox = new System.Windows.Forms.Button();
             this.btnCookieDebug = new System.Windows.Forms.Button();
             this.textboxCookieDebug = new System.Windows.Forms.TextBox();
-            this.btnBuyLootBox = new System.Windows.Forms.Button();
             this.lblLootBoxCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PesTable)).BeginInit();
@@ -246,6 +246,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // tabGrandpa
             // 
@@ -321,6 +322,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Debug menu";
             // 
+            // btnBuyLootBox
+            // 
+            this.btnBuyLootBox.Location = new System.Drawing.Point(158, 47);
+            this.btnBuyLootBox.Name = "btnBuyLootBox";
+            this.btnBuyLootBox.Size = new System.Drawing.Size(75, 23);
+            this.btnBuyLootBox.TabIndex = 2;
+            this.btnBuyLootBox.Text = "Buy loot box";
+            this.btnBuyLootBox.UseVisualStyleBackColor = true;
+            this.btnBuyLootBox.Click += new System.EventHandler(this.btnBuyLootBox_Click);
+            // 
             // btnCookieDebug
             // 
             this.btnCookieDebug.Location = new System.Drawing.Point(158, 20);
@@ -338,16 +349,6 @@
             this.textboxCookieDebug.Size = new System.Drawing.Size(145, 20);
             this.textboxCookieDebug.TabIndex = 0;
             this.textboxCookieDebug.TextChanged += new System.EventHandler(this.textboxCookieDebug_TextChanged);
-            // 
-            // btnBuyLootBox
-            // 
-            this.btnBuyLootBox.Location = new System.Drawing.Point(158, 47);
-            this.btnBuyLootBox.Name = "btnBuyLootBox";
-            this.btnBuyLootBox.Size = new System.Drawing.Size(75, 23);
-            this.btnBuyLootBox.TabIndex = 2;
-            this.btnBuyLootBox.Text = "Buy loot box";
-            this.btnBuyLootBox.UseVisualStyleBackColor = true;
-            this.btnBuyLootBox.Click += new System.EventHandler(this.btnBuyLootBox_Click);
             // 
             // lblLootBoxCount
             // 
