@@ -7,3 +7,13 @@ C:\Users\jurez\source\repos\First Form App\First Form App\obj\Debug\First_Form_A
 C:\Users\jurez\source\repos\First Form App\First Form App\obj\Debug\First Form App.csproj.GenerateResource.cache
 C:\Users\jurez\source\repos\First Form App\First Form App\obj\Debug\First Form App.exe
 C:\Users\jurez\source\repos\First Form App\First Form App\obj\Debug\First Form App.pdb
+F:\BootlegClicker\First Form App\bin\Debug\First Form App.exe.config
+F:\BootlegClicker\First Form App\bin\Debug\First Form App.exe
+F:\BootlegClicker\First Form App\bin\Debug\First Form App.pdb
+F:\BootlegClicker\First Form App\obj\Debug\First Form App.csprojAssemblyReference.cache
+F:\BootlegClicker\First Form App\obj\Debug\First_Form_App.Form1.resources
+F:\BootlegClicker\First Form App\obj\Debug\First_Form_App.Properties.Resources.resources
+F:\BootlegClicker\First Form App\obj\Debug\First Form App.csproj.GenerateResource.cache
+F:\BootlegClicker\First Form App\obj\Debug\First Form App.csproj.CoreCompileInputs.cache
+F:\BootlegClicker\First Form App\obj\Debug\First Form App.exe
+F:\BootlegClicker\First Form App\obj\Debug\First Form App.pdb
