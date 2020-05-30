@@ -27,6 +27,7 @@ namespace First_Form_App
         private int timerinterval = 1000;
         private bool buttonbool = true;
         private bool boolinterval = false;
+        int jeba;
 
 
         //Cookie button
@@ -221,6 +222,11 @@ namespace First_Form_App
             {
                 MessageBox.Show("You don't have enough cookies!");
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
 
         //Updates all family
