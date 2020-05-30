@@ -50,7 +50,7 @@ namespace First_Form_App
         //-----------FAMILY BUTTONS-----------//
 
         //Sets how fast family prices grow
-        public double multiplier = 1.2;
+        public double multiplier = 1.1;
 
         //Grandma button
         private void btnGrandma_Click(object sender, EventArgs e)
