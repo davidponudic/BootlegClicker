@@ -112,7 +112,7 @@ namespace First_Form_App
             debugcookies = Convert.ToInt32(textboxCookieDebug.Text);
         }
 
-        private void PesTable_Click(object sender, EventArgs e)
+        private void btnBuyLootBox_Click(object sender, EventArgs e)
         {
 
         }

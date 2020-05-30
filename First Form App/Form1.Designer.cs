@@ -77,6 +77,8 @@
             this.btnGrandmaDebug = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabDebugAdd = new System.Windows.Forms.TabPage();
+            this.lblLootBoxCost = new System.Windows.Forms.Label();
+            this.btnBuyLootBox = new System.Windows.Forms.Button();
             this.btnSisterDebug = new System.Windows.Forms.Button();
             this.btnBrotherDebug = new System.Windows.Forms.Button();
             this.textboxSisterDebug = new System.Windows.Forms.TextBox();
@@ -88,8 +90,6 @@
             this.textboxMotherDebug = new System.Windows.Forms.TextBox();
             this.textboxGrandpaDebug = new System.Windows.Forms.TextBox();
             this.tabDebugInfo = new System.Windows.Forms.TabPage();
-            this.btnBuyLootBox = new System.Windows.Forms.Button();
-            this.lblLootBoxCost = new System.Windows.Forms.Label();
             this.lblLootBoxCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PesTable)).BeginInit();
@@ -579,6 +579,25 @@
             this.tabDebugAdd.Text = "Add";
             this.tabDebugAdd.UseVisualStyleBackColor = true;
             // 
+            // lblLootBoxCost
+            // 
+            this.lblLootBoxCost.AutoSize = true;
+            this.lblLootBoxCost.Location = new System.Drawing.Point(40, 194);
+            this.lblLootBoxCost.Name = "lblLootBoxCost";
+            this.lblLootBoxCost.Size = new System.Drawing.Size(89, 13);
+            this.lblLootBoxCost.TabIndex = 15;
+            this.lblLootBoxCost.Text = "Loot box cost: 50";
+            // 
+            // btnBuyLootBox
+            // 
+            this.btnBuyLootBox.Location = new System.Drawing.Point(136, 190);
+            this.btnBuyLootBox.Name = "btnBuyLootBox";
+            this.btnBuyLootBox.Size = new System.Drawing.Size(91, 20);
+            this.btnBuyLootBox.TabIndex = 14;
+            this.btnBuyLootBox.Text = "Buy loot box";
+            this.btnBuyLootBox.UseVisualStyleBackColor = true;
+            this.btnBuyLootBox.Click += new System.EventHandler(this.btnBuyLootBox_Click);
+            // 
             // btnSisterDebug
             // 
             this.btnSisterDebug.Location = new System.Drawing.Point(136, 163);
@@ -678,25 +697,6 @@
             this.tabDebugInfo.TabIndex = 1;
             this.tabDebugInfo.Text = "Info";
             this.tabDebugInfo.UseVisualStyleBackColor = true;
-            // 
-            // btnBuyLootBox
-            // 
-            this.btnBuyLootBox.Location = new System.Drawing.Point(136, 190);
-            this.btnBuyLootBox.Name = "btnBuyLootBox";
-            this.btnBuyLootBox.Size = new System.Drawing.Size(91, 20);
-            this.btnBuyLootBox.TabIndex = 14;
-            this.btnBuyLootBox.Text = "Buy loot box";
-            this.btnBuyLootBox.UseVisualStyleBackColor = true;
-            this.btnBuyLootBox.Click += new System.EventHandler(this.btnBuyLootBox_Click);
-            // 
-            // lblLootBoxCost
-            // 
-            this.lblLootBoxCost.AutoSize = true;
-            this.lblLootBoxCost.Location = new System.Drawing.Point(40, 194);
-            this.lblLootBoxCost.Name = "lblLootBoxCost";
-            this.lblLootBoxCost.Size = new System.Drawing.Size(89, 13);
-            this.lblLootBoxCost.TabIndex = 15;
-            this.lblLootBoxCost.Text = "Loot box cost: 50";
             // 
             // lblLootBoxCount
             // 
