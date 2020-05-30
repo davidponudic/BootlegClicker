@@ -181,7 +181,8 @@ namespace First_Form_App
                         barLove.Maximum = 7600;
                         break;
                     default:
-                    MessageBox.Show("Bravo nekako si zajebu al pa si vec kot lvl 10 :) ");
+                        MessageBox.Show("Bravo nekako si zajebu al pa si vec kot lvl 10 :) ");
+                        break;
                 }
 
 
