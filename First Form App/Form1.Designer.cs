@@ -166,6 +166,7 @@
             this.PesTable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PesTable.TabIndex = 5;
             this.PesTable.TabStop = false;
+            this.PesTable.Click += new System.EventHandler(this.PesTable_Click);
             // 
             // lblGrandmaCost
             // 
