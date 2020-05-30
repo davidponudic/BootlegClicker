@@ -1,0 +1,9 @@
+C:\Users\jurez\source\repos\First Form App\First Form App\bin\Debug\First Form App.exe.config
+C:\Users\jurez\source\repos\First Form App\First Form App\bin\Debug\First Form App.exe
+C:\Users\jurez\source\repos\First Form App\First Form App\bin\Debug\First Form App.pdb
+C:\Users\jurez\source\repos\First Form App\First Form App\obj\Debug\First Form App.csprojAssemblyReference.cache
+C:\Users\jurez\source\repos\First Form App\First Form App\obj\Debug\First_Form_App.Form1.resources
+C:\Users\jurez\source\repos\First Form App\First Form App\obj\Debug\First_Form_App.Properties.Resources.resources
+C:\Users\jurez\source\repos\First Form App\First Form App\obj\Debug\First Form App.csproj.GenerateResource.cache
+C:\Users\jurez\source\repos\First Form App\First Form App\obj\Debug\First Form App.exe
+C:\Users\jurez\source\repos\First Form App\First Form App\obj\Debug\First Form App.pdb
