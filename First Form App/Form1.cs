@@ -26,14 +26,13 @@ namespace First_Form_App
         public int cookiemultiplier = 1, grandmamultiplier = 1;
         public int grandmavalue = 20, grandpavalue = 1000, mothervalue, fathervalue, brothervalue, sistervalue;
         public int level = 1;
-        int jeba;
+       
 
         private int timerinterval = 1000;
         private bool corgibool = true;
         private bool boolinterval = false;
 
-        public int jeba;
-        public int jeba3;
+      
 
         //Cookie button
         private void btnCookies_Click(object sender, EventArgs e)
@@ -50,7 +49,7 @@ namespace First_Form_App
         //-----------FAMILY BUTTONS-----------//
 
         //Sets how fast family prices grow
-        public double multiplier = 1.03;
+        public double multiplier = 1.2;
 
         //Grandma button
         private void btnGrandma_Click(object sender, EventArgs e)
