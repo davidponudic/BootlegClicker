@@ -84,6 +84,7 @@ namespace First_Form_App
         private void btnCookieDebug_Click(object sender, EventArgs e)
         {
             cookies += debugcookies;
+            
         }
 
         //Text box where you input needed cookies
@@ -177,6 +178,8 @@ namespace First_Form_App
                         barLove.Value= 0;
                         barLove.Maximum = 7600;
                         break;
+                    default:
+                    MessageBox.Show("Bravo nekako si zajebu al pa si vec kot lvl 10 :) ");
                 }
 
 
