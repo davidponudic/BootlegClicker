@@ -26,6 +26,7 @@ namespace First_Form_App
         public int cookiemultiplier = 1, grandmamultiplier = 1;
         public int grandmavalue = 20, grandpavalue = 1000, mothervalue, fathervalue, brothervalue, sistervalue;
         public int level = 1;
+        int jeba;
 
         private int timerinterval = 1000;
         private bool corgibool = true;
@@ -105,6 +106,11 @@ namespace First_Form_App
         private void textboxCookieDebug_TextChanged(object sender, EventArgs e)
         {
             debugcookies = Convert.ToInt32(textboxCookieDebug.Text);
+        }
+
+        private void PesTable_Click(object sender, EventArgs e)
+        {
+
         }
 
         //DEBUG Add grandmas

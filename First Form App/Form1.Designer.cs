@@ -49,10 +49,26 @@
             this.lblGrandmaCPS = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabGrandpa = new System.Windows.Forms.TabPage();
+            this.btnGrandpa = new System.Windows.Forms.Button();
+            this.lblGrandpaCost = new System.Windows.Forms.Label();
+            this.lblGrandpaCPS = new System.Windows.Forms.Label();
+            this.lblGrandpas = new System.Windows.Forms.Label();
             this.tabMother = new System.Windows.Forms.TabPage();
+            this.lblMotherCost = new System.Windows.Forms.Label();
+            this.btnMother = new System.Windows.Forms.Button();
+            this.lblMothers = new System.Windows.Forms.Label();
             this.tabFather = new System.Windows.Forms.TabPage();
+            this.lblFatherCost = new System.Windows.Forms.Label();
+            this.btnFather = new System.Windows.Forms.Button();
+            this.lblFathers = new System.Windows.Forms.Label();
             this.lblBrother = new System.Windows.Forms.TabPage();
+            this.lblBrotherCost = new System.Windows.Forms.Label();
+            this.btnBrother = new System.Windows.Forms.Button();
+            this.lblBrothers = new System.Windows.Forms.Label();
             this.lblSister = new System.Windows.Forms.TabPage();
+            this.lblSisterCost = new System.Windows.Forms.Label();
+            this.btnSister = new System.Windows.Forms.Button();
+            this.lblSisters = new System.Windows.Forms.Label();
             this.tooltip1 = new System.Windows.Forms.ToolTip(this.components);
             this.lblLoveValue = new System.Windows.Forms.Label();
             this.textboxCookieDebug = new System.Windows.Forms.TextBox();
@@ -72,22 +88,6 @@
             this.textboxMotherDebug = new System.Windows.Forms.TextBox();
             this.textboxGrandpaDebug = new System.Windows.Forms.TextBox();
             this.tabDebugInfo = new System.Windows.Forms.TabPage();
-            this.lblGrandpas = new System.Windows.Forms.Label();
-            this.lblGrandpaCPS = new System.Windows.Forms.Label();
-            this.lblGrandpaCost = new System.Windows.Forms.Label();
-            this.btnGrandpa = new System.Windows.Forms.Button();
-            this.lblMothers = new System.Windows.Forms.Label();
-            this.lblFathers = new System.Windows.Forms.Label();
-            this.lblBrothers = new System.Windows.Forms.Label();
-            this.lblSisters = new System.Windows.Forms.Label();
-            this.btnMother = new System.Windows.Forms.Button();
-            this.btnFather = new System.Windows.Forms.Button();
-            this.btnBrother = new System.Windows.Forms.Button();
-            this.btnSister = new System.Windows.Forms.Button();
-            this.lblMotherCost = new System.Windows.Forms.Label();
-            this.lblFatherCost = new System.Windows.Forms.Label();
-            this.lblBrotherCost = new System.Windows.Forms.Label();
-            this.lblSisterCost = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PesTable)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -166,6 +166,7 @@
             this.PesTable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PesTable.TabIndex = 5;
             this.PesTable.TabStop = false;
+            this.PesTable.Click += new System.EventHandler(this.PesTable_Click);
             // 
             // lblGrandmaCost
             // 
@@ -295,6 +296,42 @@
             this.tabGrandpa.Text = "Grandpa";
             this.tabGrandpa.UseVisualStyleBackColor = true;
             // 
+            // btnGrandpa
+            // 
+            this.btnGrandpa.Location = new System.Drawing.Point(183, 230);
+            this.btnGrandpa.Name = "btnGrandpa";
+            this.btnGrandpa.Size = new System.Drawing.Size(123, 23);
+            this.btnGrandpa.TabIndex = 3;
+            this.btnGrandpa.Text = "Call grandpa";
+            this.btnGrandpa.UseVisualStyleBackColor = true;
+            // 
+            // lblGrandpaCost
+            // 
+            this.lblGrandpaCost.AutoSize = true;
+            this.lblGrandpaCost.Location = new System.Drawing.Point(188, 214);
+            this.lblGrandpaCost.Name = "lblGrandpaCost";
+            this.lblGrandpaCost.Size = new System.Drawing.Size(58, 13);
+            this.lblGrandpaCost.TabIndex = 2;
+            this.lblGrandpaCost.Text = "Cost: 1000";
+            // 
+            // lblGrandpaCPS
+            // 
+            this.lblGrandpaCPS.AutoSize = true;
+            this.lblGrandpaCPS.Location = new System.Drawing.Point(188, 29);
+            this.lblGrandpaCPS.Name = "lblGrandpaCPS";
+            this.lblGrandpaCPS.Size = new System.Drawing.Size(117, 13);
+            this.lblGrandpaCPS.TabIndex = 1;
+            this.lblGrandpaCPS.Text = "Bonus grandma CPS: 0";
+            // 
+            // lblGrandpas
+            // 
+            this.lblGrandpas.AutoSize = true;
+            this.lblGrandpas.Location = new System.Drawing.Point(188, 12);
+            this.lblGrandpas.Name = "lblGrandpas";
+            this.lblGrandpas.Size = new System.Drawing.Size(85, 13);
+            this.lblGrandpas.TabIndex = 0;
+            this.lblGrandpas.Text = "Grandpa level: 0";
+            // 
             // tabMother
             // 
             this.tabMother.Controls.Add(this.lblMotherCost);
@@ -306,6 +343,33 @@
             this.tabMother.TabIndex = 2;
             this.tabMother.Text = "Mother";
             this.tabMother.UseVisualStyleBackColor = true;
+            // 
+            // lblMotherCost
+            // 
+            this.lblMotherCost.AutoSize = true;
+            this.lblMotherCost.Location = new System.Drawing.Point(188, 214);
+            this.lblMotherCost.Name = "lblMotherCost";
+            this.lblMotherCost.Size = new System.Drawing.Size(34, 13);
+            this.lblMotherCost.TabIndex = 2;
+            this.lblMotherCost.Text = "Cost: ";
+            // 
+            // btnMother
+            // 
+            this.btnMother.Location = new System.Drawing.Point(183, 230);
+            this.btnMother.Name = "btnMother";
+            this.btnMother.Size = new System.Drawing.Size(123, 23);
+            this.btnMother.TabIndex = 1;
+            this.btnMother.Text = "Call mother";
+            this.btnMother.UseVisualStyleBackColor = true;
+            // 
+            // lblMothers
+            // 
+            this.lblMothers.AutoSize = true;
+            this.lblMothers.Location = new System.Drawing.Point(188, 12);
+            this.lblMothers.Name = "lblMothers";
+            this.lblMothers.Size = new System.Drawing.Size(77, 13);
+            this.lblMothers.TabIndex = 0;
+            this.lblMothers.Text = "Mother level: 0";
             // 
             // tabFather
             // 
@@ -319,6 +383,33 @@
             this.tabFather.Text = "Father";
             this.tabFather.UseVisualStyleBackColor = true;
             // 
+            // lblFatherCost
+            // 
+            this.lblFatherCost.AutoSize = true;
+            this.lblFatherCost.Location = new System.Drawing.Point(188, 214);
+            this.lblFatherCost.Name = "lblFatherCost";
+            this.lblFatherCost.Size = new System.Drawing.Size(34, 13);
+            this.lblFatherCost.TabIndex = 2;
+            this.lblFatherCost.Text = "Cost: ";
+            // 
+            // btnFather
+            // 
+            this.btnFather.Location = new System.Drawing.Point(183, 230);
+            this.btnFather.Name = "btnFather";
+            this.btnFather.Size = new System.Drawing.Size(123, 23);
+            this.btnFather.TabIndex = 1;
+            this.btnFather.Text = "Call father";
+            this.btnFather.UseVisualStyleBackColor = true;
+            // 
+            // lblFathers
+            // 
+            this.lblFathers.AutoSize = true;
+            this.lblFathers.Location = new System.Drawing.Point(188, 12);
+            this.lblFathers.Name = "lblFathers";
+            this.lblFathers.Size = new System.Drawing.Size(74, 13);
+            this.lblFathers.TabIndex = 0;
+            this.lblFathers.Text = "Father level: 0";
+            // 
             // lblBrother
             // 
             this.lblBrother.Controls.Add(this.lblBrotherCost);
@@ -331,6 +422,33 @@
             this.lblBrother.Text = "Brother";
             this.lblBrother.UseVisualStyleBackColor = true;
             // 
+            // lblBrotherCost
+            // 
+            this.lblBrotherCost.AutoSize = true;
+            this.lblBrotherCost.Location = new System.Drawing.Point(188, 214);
+            this.lblBrotherCost.Name = "lblBrotherCost";
+            this.lblBrotherCost.Size = new System.Drawing.Size(34, 13);
+            this.lblBrotherCost.TabIndex = 2;
+            this.lblBrotherCost.Text = "Cost: ";
+            // 
+            // btnBrother
+            // 
+            this.btnBrother.Location = new System.Drawing.Point(183, 230);
+            this.btnBrother.Name = "btnBrother";
+            this.btnBrother.Size = new System.Drawing.Size(123, 23);
+            this.btnBrother.TabIndex = 1;
+            this.btnBrother.Text = "Call brother";
+            this.btnBrother.UseVisualStyleBackColor = true;
+            // 
+            // lblBrothers
+            // 
+            this.lblBrothers.AutoSize = true;
+            this.lblBrothers.Location = new System.Drawing.Point(188, 12);
+            this.lblBrothers.Name = "lblBrothers";
+            this.lblBrothers.Size = new System.Drawing.Size(78, 13);
+            this.lblBrothers.TabIndex = 0;
+            this.lblBrothers.Text = "Brother level: 0";
+            // 
             // lblSister
             // 
             this.lblSister.Controls.Add(this.lblSisterCost);
@@ -342,6 +460,33 @@
             this.lblSister.TabIndex = 5;
             this.lblSister.Text = "Sister";
             this.lblSister.UseVisualStyleBackColor = true;
+            // 
+            // lblSisterCost
+            // 
+            this.lblSisterCost.AutoSize = true;
+            this.lblSisterCost.Location = new System.Drawing.Point(188, 214);
+            this.lblSisterCost.Name = "lblSisterCost";
+            this.lblSisterCost.Size = new System.Drawing.Size(34, 13);
+            this.lblSisterCost.TabIndex = 2;
+            this.lblSisterCost.Text = "Cost: ";
+            // 
+            // btnSister
+            // 
+            this.btnSister.Location = new System.Drawing.Point(183, 230);
+            this.btnSister.Name = "btnSister";
+            this.btnSister.Size = new System.Drawing.Size(123, 23);
+            this.btnSister.TabIndex = 1;
+            this.btnSister.Text = "Call sister";
+            this.btnSister.UseVisualStyleBackColor = true;
+            // 
+            // lblSisters
+            // 
+            this.lblSisters.AutoSize = true;
+            this.lblSisters.Location = new System.Drawing.Point(188, 12);
+            this.lblSisters.Name = "lblSisters";
+            this.lblSisters.Size = new System.Drawing.Size(70, 13);
+            this.lblSisters.TabIndex = 0;
+            this.lblSisters.Text = "Sister level: 0";
             // 
             // tooltip1
             // 
@@ -529,150 +674,6 @@
             this.tabDebugInfo.TabIndex = 1;
             this.tabDebugInfo.Text = "Info";
             this.tabDebugInfo.UseVisualStyleBackColor = true;
-            // 
-            // lblGrandpas
-            // 
-            this.lblGrandpas.AutoSize = true;
-            this.lblGrandpas.Location = new System.Drawing.Point(188, 12);
-            this.lblGrandpas.Name = "lblGrandpas";
-            this.lblGrandpas.Size = new System.Drawing.Size(85, 13);
-            this.lblGrandpas.TabIndex = 0;
-            this.lblGrandpas.Text = "Grandpa level: 0";
-            // 
-            // lblGrandpaCPS
-            // 
-            this.lblGrandpaCPS.AutoSize = true;
-            this.lblGrandpaCPS.Location = new System.Drawing.Point(188, 29);
-            this.lblGrandpaCPS.Name = "lblGrandpaCPS";
-            this.lblGrandpaCPS.Size = new System.Drawing.Size(117, 13);
-            this.lblGrandpaCPS.TabIndex = 1;
-            this.lblGrandpaCPS.Text = "Bonus grandma CPS: 0";
-            // 
-            // lblGrandpaCost
-            // 
-            this.lblGrandpaCost.AutoSize = true;
-            this.lblGrandpaCost.Location = new System.Drawing.Point(188, 214);
-            this.lblGrandpaCost.Name = "lblGrandpaCost";
-            this.lblGrandpaCost.Size = new System.Drawing.Size(58, 13);
-            this.lblGrandpaCost.TabIndex = 2;
-            this.lblGrandpaCost.Text = "Cost: 1000";
-            // 
-            // btnGrandpa
-            // 
-            this.btnGrandpa.Location = new System.Drawing.Point(183, 230);
-            this.btnGrandpa.Name = "btnGrandpa";
-            this.btnGrandpa.Size = new System.Drawing.Size(123, 23);
-            this.btnGrandpa.TabIndex = 3;
-            this.btnGrandpa.Text = "Call grandpa";
-            this.btnGrandpa.UseVisualStyleBackColor = true;
-            // 
-            // lblMothers
-            // 
-            this.lblMothers.AutoSize = true;
-            this.lblMothers.Location = new System.Drawing.Point(188, 12);
-            this.lblMothers.Name = "lblMothers";
-            this.lblMothers.Size = new System.Drawing.Size(77, 13);
-            this.lblMothers.TabIndex = 0;
-            this.lblMothers.Text = "Mother level: 0";
-            // 
-            // lblFathers
-            // 
-            this.lblFathers.AutoSize = true;
-            this.lblFathers.Location = new System.Drawing.Point(188, 12);
-            this.lblFathers.Name = "lblFathers";
-            this.lblFathers.Size = new System.Drawing.Size(74, 13);
-            this.lblFathers.TabIndex = 0;
-            this.lblFathers.Text = "Father level: 0";
-            // 
-            // lblBrothers
-            // 
-            this.lblBrothers.AutoSize = true;
-            this.lblBrothers.Location = new System.Drawing.Point(188, 12);
-            this.lblBrothers.Name = "lblBrothers";
-            this.lblBrothers.Size = new System.Drawing.Size(78, 13);
-            this.lblBrothers.TabIndex = 0;
-            this.lblBrothers.Text = "Brother level: 0";
-            // 
-            // lblSisters
-            // 
-            this.lblSisters.AutoSize = true;
-            this.lblSisters.Location = new System.Drawing.Point(188, 12);
-            this.lblSisters.Name = "lblSisters";
-            this.lblSisters.Size = new System.Drawing.Size(70, 13);
-            this.lblSisters.TabIndex = 0;
-            this.lblSisters.Text = "Sister level: 0";
-            // 
-            // btnMother
-            // 
-            this.btnMother.Location = new System.Drawing.Point(183, 230);
-            this.btnMother.Name = "btnMother";
-            this.btnMother.Size = new System.Drawing.Size(123, 23);
-            this.btnMother.TabIndex = 1;
-            this.btnMother.Text = "Call mother";
-            this.btnMother.UseVisualStyleBackColor = true;
-            // 
-            // btnFather
-            // 
-            this.btnFather.Location = new System.Drawing.Point(183, 230);
-            this.btnFather.Name = "btnFather";
-            this.btnFather.Size = new System.Drawing.Size(123, 23);
-            this.btnFather.TabIndex = 1;
-            this.btnFather.Text = "Call father";
-            this.btnFather.UseVisualStyleBackColor = true;
-            // 
-            // btnBrother
-            // 
-            this.btnBrother.Location = new System.Drawing.Point(183, 230);
-            this.btnBrother.Name = "btnBrother";
-            this.btnBrother.Size = new System.Drawing.Size(123, 23);
-            this.btnBrother.TabIndex = 1;
-            this.btnBrother.Text = "Call brother";
-            this.btnBrother.UseVisualStyleBackColor = true;
-            // 
-            // btnSister
-            // 
-            this.btnSister.Location = new System.Drawing.Point(183, 230);
-            this.btnSister.Name = "btnSister";
-            this.btnSister.Size = new System.Drawing.Size(123, 23);
-            this.btnSister.TabIndex = 1;
-            this.btnSister.Text = "Call sister";
-            this.btnSister.UseVisualStyleBackColor = true;
-            // 
-            // lblMotherCost
-            // 
-            this.lblMotherCost.AutoSize = true;
-            this.lblMotherCost.Location = new System.Drawing.Point(188, 214);
-            this.lblMotherCost.Name = "lblMotherCost";
-            this.lblMotherCost.Size = new System.Drawing.Size(34, 13);
-            this.lblMotherCost.TabIndex = 2;
-            this.lblMotherCost.Text = "Cost: ";
-            // 
-            // lblFatherCost
-            // 
-            this.lblFatherCost.AutoSize = true;
-            this.lblFatherCost.Location = new System.Drawing.Point(188, 214);
-            this.lblFatherCost.Name = "lblFatherCost";
-            this.lblFatherCost.Size = new System.Drawing.Size(34, 13);
-            this.lblFatherCost.TabIndex = 2;
-            this.lblFatherCost.Text = "Cost: ";
-            // 
-            // lblBrotherCost
-            // 
-            this.lblBrotherCost.AutoSize = true;
-            this.lblBrotherCost.Location = new System.Drawing.Point(188, 214);
-            this.lblBrotherCost.Name = "lblBrotherCost";
-            this.lblBrotherCost.Size = new System.Drawing.Size(34, 13);
-            this.lblBrotherCost.TabIndex = 2;
-            this.lblBrotherCost.Text = "Cost: ";
-            // 
-            // lblSisterCost
-            // 
-            this.lblSisterCost.AutoSize = true;
-            this.lblSisterCost.Location = new System.Drawing.Point(188, 214);
-            this.lblSisterCost.Name = "lblSisterCost";
-            this.lblSisterCost.Size = new System.Drawing.Size(34, 13);
-            this.lblSisterCost.TabIndex = 2;
-            this.lblSisterCost.Text = "Cost: ";
             // 
             // Form1
             // 
