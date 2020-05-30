@@ -26,6 +26,7 @@ namespace First_Form_App
         public int cookiemultiplier = 1, grandmamultiplier = 1;
         public int grandmavalue = 20, grandpavalue = 1000, mothervalue, fathervalue, brothervalue, sistervalue;
         public int level = 1;
+        public int LootBoxCount = 0;
        
 
         private int timerinterval = 1000;
@@ -77,6 +78,7 @@ namespace First_Form_App
             CookieAddition();
 
             Score += (cookies - cookiesprev);
+            lblLootBoxCount.Text = "Loot box count: " + LootBoxCount;
             
             CookieUpdate();
             FamilyUpdate();
@@ -100,6 +102,7 @@ namespace First_Form_App
         private void btnCookieDebug_Click(object sender, EventArgs e)
         {
             cookies += debugcookies;
+            Score += debugcookies;
             CookieUpdate();
         }
 
@@ -112,6 +115,15 @@ namespace First_Form_App
         private void PesTable_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBuyLootBox_Click(object sender, EventArgs e)
+        {
+            if(cookies >= 50)
+            {
+                LootBoxCount++;
+                cookies -= 50;
+            }
         }
 
         //DEBUG Add grandmas
