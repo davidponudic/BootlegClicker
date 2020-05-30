@@ -33,7 +33,6 @@ namespace First_Form_App
 
         public int jeba;
 
-
         //Cookie button
         private void btnCookies_Click(object sender, EventArgs e)
         {
