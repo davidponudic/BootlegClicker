@@ -86,6 +86,7 @@ namespace First_Form_App
         private void btnCookieDebug_Click(object sender, EventArgs e)
         {
             cookies += debugcookies;
+            Score += debugcookies;
             
         }
 
@@ -230,6 +231,7 @@ namespace First_Form_App
             lblGrandmaCPS.Text = "CPS: " + grandmas;
         }
 
+        //Score Update
         private void ScoreUpdate()
         {
             lblScore.Text = "Score: " + Score.ToString();
