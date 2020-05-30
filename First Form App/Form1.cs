@@ -31,6 +31,8 @@ namespace First_Form_App
         private bool corgibool = true;
         private bool boolinterval = false;
 
+        public int jeba;
+
 
         //Cookie button
         private void btnCookies_Click(object sender, EventArgs e)
