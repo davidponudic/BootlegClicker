@@ -88,6 +88,7 @@
             this.textboxMotherDebug = new System.Windows.Forms.TextBox();
             this.textboxGrandpaDebug = new System.Windows.Forms.TextBox();
             this.tabDebugInfo = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PesTable)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -100,6 +101,7 @@
             this.lblSister.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabDebugAdd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCookies
@@ -283,6 +285,7 @@
             // 
             // tabGrandpa
             // 
+            this.tabGrandpa.Controls.Add(this.pictureBox2);
             this.tabGrandpa.Controls.Add(this.btnGrandpa);
             this.tabGrandpa.Controls.Add(this.lblGrandpaCost);
             this.tabGrandpa.Controls.Add(this.lblGrandpaCPS);
@@ -674,6 +677,14 @@
             this.tabDebugInfo.Text = "Info";
             this.tabDebugInfo.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(-4, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(181, 259);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -713,6 +724,7 @@
             this.tabControl2.ResumeLayout(false);
             this.tabDebugAdd.ResumeLayout(false);
             this.tabDebugAdd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -778,6 +790,7 @@
         private System.Windows.Forms.Label lblSisterCost;
         private System.Windows.Forms.Button btnSister;
         private System.Windows.Forms.Label lblSisters;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
