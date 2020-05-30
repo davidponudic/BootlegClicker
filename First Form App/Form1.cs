@@ -117,15 +117,6 @@ namespace First_Form_App
 
         }
 
-        private void btnBuyLootBox_Click(object sender, EventArgs e)
-        {
-            if(cookies >= 50)
-            {
-                LootBoxCount++;
-                cookies -= 50;
-            }
-        }
-
         //DEBUG Add grandmas
         private void btnGrandmaDebug_Click(object sender, EventArgs e)
         {
