@@ -1,0 +1,10 @@
+F:\programs\BootlegClicker\First Form App\bin\Debug\First Form App.exe.config
+F:\programs\BootlegClicker\First Form App\bin\Debug\First Form App.exe
+F:\programs\BootlegClicker\First Form App\bin\Debug\First Form App.pdb
+F:\programs\BootlegClicker\First Form App\obj\Debug\First Form App.csprojAssemblyReference.cache
+F:\programs\BootlegClicker\First Form App\obj\Debug\First_Form_App.Form1.resources
+F:\programs\BootlegClicker\First Form App\obj\Debug\First_Form_App.Properties.Resources.resources
+F:\programs\BootlegClicker\First Form App\obj\Debug\First Form App.csproj.GenerateResource.cache
+F:\programs\BootlegClicker\First Form App\obj\Debug\First Form App.csproj.CoreCompileInputs.cache
+F:\programs\BootlegClicker\First Form App\obj\Debug\First Form App.exe
+F:\programs\BootlegClicker\First Form App\obj\Debug\First Form App.pdb

@@ -22,6 +22,8 @@ namespace First_Form_App
         public int cookies, cookiesprev, Score, debugcookies;
         public int grandmas;
         public int level = 1;
+        public int LootBoxCount = 0;
+        public int LootBoxPrice = 50;
         private int timerinterval = 1000;
         private bool buttonbool = true;
         private bool boolinterval = false;
@@ -201,6 +203,20 @@ namespace First_Form_App
         private void CookieUpdate()
         {
             lblCookies.Text = "Cookies: " + cookies;
+            lblLootBoxCount.Text = "Loot box count: " + LootBoxCount;
+        }
+
+        private void btnBuyLootBox_Click(object sender, EventArgs e)
+        {
+            if(cookies >= 50)
+            {
+                LootBoxCount++;
+                cookies -= LootBoxPrice;
+            }
+            else
+            {
+                MessageBox.Show("You don't have enough cookies!");
+            }
         }
 
         //Updates all family
