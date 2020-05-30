@@ -84,6 +84,7 @@ namespace First_Form_App
             FamilyUpdate();
             ScoreUpdate();
             PictureChange();
+
         }
 
         //Starts timer when button is first clicked
