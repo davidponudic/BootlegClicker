@@ -32,6 +32,7 @@ namespace First_Form_App
         private bool boolinterval = false;
 
         public int jeba;
+        public int jeba3;
 
         //Cookie button
         private void btnCookies_Click(object sender, EventArgs e)
