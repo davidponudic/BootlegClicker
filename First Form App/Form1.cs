@@ -109,11 +109,6 @@ namespace First_Form_App
             debugcookies = Convert.ToInt32(textboxCookieDebug.Text);
         }
 
-        private void PesTable_Click(object sender, EventArgs e)
-        {
-
-        }
-
         //DEBUG Add grandmas
         private void btnGrandmaDebug_Click(object sender, EventArgs e)
         {

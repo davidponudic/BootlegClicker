@@ -17,3 +17,12 @@ D:\project\yaouuuuu boi2\First Form App\obj\Debug\First Form App.csproj.Generate
 D:\project\yaouuuuu boi2\First Form App\obj\Debug\First Form App.csproj.CoreCompileInputs.cache
 D:\project\yaouuuuu boi2\First Form App\obj\Debug\First Form App.exe
 D:\project\yaouuuuu boi2\First Form App\obj\Debug\First Form App.pdb
+C:\Users\jurez\source\repos\BootlegClicker\First Form App\bin\Debug\First Form App.exe.config
+C:\Users\jurez\source\repos\BootlegClicker\First Form App\bin\Debug\First Form App.exe
+C:\Users\jurez\source\repos\BootlegClicker\First Form App\bin\Debug\First Form App.pdb
+C:\Users\jurez\source\repos\BootlegClicker\First Form App\obj\Debug\First Form App.csprojAssemblyReference.cache
+C:\Users\jurez\source\repos\BootlegClicker\First Form App\obj\Debug\First_Form_App.Form1.resources
+C:\Users\jurez\source\repos\BootlegClicker\First Form App\obj\Debug\First_Form_App.Properties.Resources.resources
+C:\Users\jurez\source\repos\BootlegClicker\First Form App\obj\Debug\First Form App.csproj.GenerateResource.cache
+C:\Users\jurez\source\repos\BootlegClicker\First Form App\obj\Debug\First Form App.exe
+C:\Users\jurez\source\repos\BootlegClicker\First Form App\obj\Debug\First Form App.pdb
