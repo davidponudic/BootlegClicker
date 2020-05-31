@@ -46,6 +46,7 @@
             this.btnXP_100 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabGrandma = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblGrandmaCPS = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabGrandpa = new System.Windows.Forms.TabPage();
@@ -99,8 +100,9 @@
             this.lblRare = new System.Windows.Forms.Label();
             this.lblUltra = new System.Windows.Forms.Label();
             this.lblLootBoxCookies = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblMoney = new System.Windows.Forms.Label();
+            this.tabRecipeBook = new System.Windows.Forms.TabPage();
+            this.btnNeke = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PesTable)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -115,6 +117,7 @@
             this.tabControl2.SuspendLayout();
             this.tabDebugAdd.SuspendLayout();
             this.tabDebugInfo.SuspendLayout();
+            this.tabRecipeBook.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCookies
@@ -280,6 +283,15 @@
             this.tabGrandma.TabIndex = 0;
             this.tabGrandma.Text = "Grandma";
             this.tabGrandma.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "label1";
             // 
             // lblGrandmaCPS
             // 
@@ -576,6 +588,7 @@
             this.tabControl2.Controls.Add(this.tabLootbox);
             this.tabControl2.Controls.Add(this.tabDebugAdd);
             this.tabControl2.Controls.Add(this.tabDebugInfo);
+            this.tabControl2.Controls.Add(this.tabRecipeBook);
             this.tabControl2.Location = new System.Drawing.Point(468, 303);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
@@ -811,14 +824,25 @@
             this.lblMoney.TabIndex = 30;
             this.lblMoney.Text = "Money: 0";
             // 
-            // label1
+            // tabRecipeBook
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "label1";
+            this.tabRecipeBook.Controls.Add(this.btnNeke);
+            this.tabRecipeBook.Location = new System.Drawing.Point(4, 22);
+            this.tabRecipeBook.Name = "tabRecipeBook";
+            this.tabRecipeBook.Size = new System.Drawing.Size(312, 258);
+            this.tabRecipeBook.TabIndex = 3;
+            this.tabRecipeBook.Text = "Recipe book";
+            this.tabRecipeBook.UseVisualStyleBackColor = true;
+            // 
+            // btnNeke
+            // 
+            this.btnNeke.Location = new System.Drawing.Point(4, 4);
+            this.btnNeke.Name = "btnNeke";
+            this.btnNeke.Size = new System.Drawing.Size(75, 23);
+            this.btnNeke.TabIndex = 0;
+            this.btnNeke.Text = "button1";
+            this.btnNeke.UseVisualStyleBackColor = true;
+            this.btnNeke.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -868,6 +892,7 @@
             this.tabDebugAdd.PerformLayout();
             this.tabDebugInfo.ResumeLayout(false);
             this.tabDebugInfo.PerformLayout();
+            this.tabRecipeBook.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -946,6 +971,8 @@
         private System.Windows.Forms.Label lblLootBoxCookies;
         private System.Windows.Forms.Label lblMoney;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabRecipeBook;
+        private System.Windows.Forms.Button btnNeke;
     }
 }
 
