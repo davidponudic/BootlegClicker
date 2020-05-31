@@ -49,6 +49,7 @@
             this.lblGrandmaCPS = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabGrandpa = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnGrandpa = new System.Windows.Forms.Button();
             this.lblGrandpaCost = new System.Windows.Forms.Label();
             this.lblGrandpaCPS = new System.Windows.Forms.Label();
@@ -91,20 +92,20 @@
             this.textboxGrandpaDebug = new System.Windows.Forms.TextBox();
             this.tabDebugInfo = new System.Windows.Forms.TabPage();
             this.lblLootBoxCount = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblChance = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PesTable)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabGrandma.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabGrandpa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabMother.SuspendLayout();
             this.tabFather.SuspendLayout();
             this.lblBrother.SuspendLayout();
             this.lblSister.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabDebugAdd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCookies
@@ -300,6 +301,16 @@
             this.tabGrandpa.TabIndex = 1;
             this.tabGrandpa.Text = "Grandpa";
             this.tabGrandpa.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-4, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(186, 259);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
             // 
             // btnGrandpa
             // 
@@ -710,21 +721,21 @@
             this.lblLootBoxCount.TabIndex = 27;
             this.lblLootBoxCount.Text = "Loot box count: 0";
             // 
-            // pictureBox2
+            // lblChance
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-4, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(186, 259);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.lblChance.AutoSize = true;
+            this.lblChance.Location = new System.Drawing.Point(138, 478);
+            this.lblChance.Name = "lblChance";
+            this.lblChance.Size = new System.Drawing.Size(13, 13);
+            this.lblChance.TabIndex = 28;
+            this.lblChance.Text = "0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 601);
+            this.Controls.Add(this.lblChance);
             this.Controls.Add(this.lblLootBoxCount);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.lblLoveValue);
@@ -749,6 +760,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabGrandpa.ResumeLayout(false);
             this.tabGrandpa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabMother.ResumeLayout(false);
             this.tabMother.PerformLayout();
             this.tabFather.ResumeLayout(false);
@@ -760,7 +772,6 @@
             this.tabControl2.ResumeLayout(false);
             this.tabDebugAdd.ResumeLayout(false);
             this.tabDebugAdd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -830,6 +841,7 @@
         private System.Windows.Forms.Label lblLootBoxCost;
         private System.Windows.Forms.Label lblLootBoxCount;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblChance;
     }
 }
 
