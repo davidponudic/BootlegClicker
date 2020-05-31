@@ -26,6 +26,7 @@ namespace First_Form_App
         public int grandmavalue = 20, grandpavalue = 1000, mothervalue, fathervalue, brothervalue, sistervalue;
         public int level = 1;
         public int LootBoxCount = 0;
+        public int Ultra = 0, Rare = 0, Common = 0, LootBoxCookies = 0, LootBoxCookiesCost = 0;
        
 
         private int timerinterval = 1000;
@@ -70,7 +71,13 @@ namespace First_Form_App
 
             Score += (cookies - cookiesprev);
             lblLootBoxCount.Text = "Loot box count: " + LootBoxCount;
-            
+
+            lblCommon.Text = "Common: " + Convert.ToString(Common);
+            lblRare.Text = "Rare: " + Convert.ToString(Rare);
+            lblUltra.Text = "Ultra Rare: " + Convert.ToString(Ultra);
+
+            lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxCookies) + " (" + Convert.ToString(LootBoxCookiesCost) + ")";
+
             CookieUpdate();
             FamilyUpdate();
             ScoreUpdate();
@@ -110,80 +117,32 @@ namespace First_Form_App
             {
                 LootBoxCount++;
                 cookies -= 50;
-                int Chance = rnd.Next(1, 6);
-                int Chance2 = rnd.Next(1, 6);
-                int Chance3 = rnd.Next(1, 6);
+                int Chance = rnd.Next(0, 100);
                 lblChance.Text = Convert.ToString(Chance);
+                LootBoxCookiesCost += 50;
 
-                switch(Chance)
+                if (Chance <= 50)
                 {
-                    case 1:
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                    case 4:
-                        break;
-                    case 5:
-                        if (Chance2==Chance)
-                        {
-                            switch (Chance2)
-                            {
-                                case 1:
-                                    break;
-                                case 2:
-                                    break;
-                                case 3:
-                                    break;
-                                case 4:
-                                    break;
-                                case 5:
-                                    if (Chance3==Chance2)
-                                    {
-                                        switch (Chance3)
-                                        {
-                                            case 1:
-                                                break;
-                                            case 2:
-                                                break;
-                                            case 3:
-                                                break;
-                                            case 4:
-                                                break;
-                                            case 5:
-                                                MessageBox.Show("ULTRA RARE!");
-                                                break;
-                                        }
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("RARE!");
-                                    }
-                                    break;
-                                    
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("COMMON!");
-                        }
-                        break;
-                        
+                    LootBoxCookies += rnd.Next(30, 71);
+                    MessageBox.Show("OOF!");
+                    cookies += LootBoxCookies;
+                    
                 }
-
-                /*if(Chance == 5)
+                else if(Chance <= 94 && Chance > 50)
                 {
-                    if(Chance == 5)
-                    {
-                        if(Chance == 5)
-                        {
-                            MessageBox.Show("ULTRA RARE!");
-                        }
-                        MessageBox.Show("RARE!");
-                    }
                     MessageBox.Show("COMMON!");
-                }*/
+                    Common++;
+                }   
+                else if(Chance >= 95 && Chance < 99)
+                {
+                    MessageBox.Show("RARE!");
+                    Rare++;
+                }
+                else if (Chance >= 99)
+                {
+                    MessageBox.Show("ULTRA RARE!");
+                    Ultra++;
+                }
             }
         }
 

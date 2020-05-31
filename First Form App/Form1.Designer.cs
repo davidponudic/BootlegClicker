@@ -93,6 +93,10 @@
             this.tabDebugInfo = new System.Windows.Forms.TabPage();
             this.lblLootBoxCount = new System.Windows.Forms.Label();
             this.lblChance = new System.Windows.Forms.Label();
+            this.lblCommon = new System.Windows.Forms.Label();
+            this.lblRare = new System.Windows.Forms.Label();
+            this.lblUltra = new System.Windows.Forms.Label();
+            this.lblLootBoxCookies = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PesTable)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -730,11 +734,51 @@
             this.lblChance.TabIndex = 28;
             this.lblChance.Text = "0";
             // 
+            // lblCommon
+            // 
+            this.lblCommon.AutoSize = true;
+            this.lblCommon.Location = new System.Drawing.Point(138, 504);
+            this.lblCommon.Name = "lblCommon";
+            this.lblCommon.Size = new System.Drawing.Size(60, 13);
+            this.lblCommon.TabIndex = 28;
+            this.lblCommon.Text = "Common: 0";
+            // 
+            // lblRare
+            // 
+            this.lblRare.AutoSize = true;
+            this.lblRare.Location = new System.Drawing.Point(138, 517);
+            this.lblRare.Name = "lblRare";
+            this.lblRare.Size = new System.Drawing.Size(42, 13);
+            this.lblRare.TabIndex = 28;
+            this.lblRare.Text = "Rare: 0";
+            // 
+            // lblUltra
+            // 
+            this.lblUltra.AutoSize = true;
+            this.lblUltra.Location = new System.Drawing.Point(138, 530);
+            this.lblUltra.Name = "lblUltra";
+            this.lblUltra.Size = new System.Drawing.Size(67, 13);
+            this.lblUltra.TabIndex = 28;
+            this.lblUltra.Text = "Ultra Rare: 0";
+            // 
+            // lblLootBoxCookies
+            // 
+            this.lblLootBoxCookies.AutoSize = true;
+            this.lblLootBoxCookies.Location = new System.Drawing.Point(141, 558);
+            this.lblLootBoxCookies.Name = "lblLootBoxCookies";
+            this.lblLootBoxCookies.Size = new System.Drawing.Size(57, 13);
+            this.lblLootBoxCookies.TabIndex = 29;
+            this.lblLootBoxCookies.Text = "Cookies: 0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 601);
+            this.Controls.Add(this.lblLootBoxCookies);
+            this.Controls.Add(this.lblUltra);
+            this.Controls.Add(this.lblRare);
+            this.Controls.Add(this.lblCommon);
             this.Controls.Add(this.lblChance);
             this.Controls.Add(this.lblLootBoxCount);
             this.Controls.Add(this.tabControl2);
@@ -842,6 +886,10 @@
         private System.Windows.Forms.Label lblLootBoxCount;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblChance;
+        private System.Windows.Forms.Label lblCommon;
+        private System.Windows.Forms.Label lblRare;
+        private System.Windows.Forms.Label lblUltra;
+        private System.Windows.Forms.Label lblLootBoxCookies;
     }
 }
 
