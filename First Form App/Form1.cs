@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using First_Form_App.Family;
+using First_Form_App.Inventory;
 
 namespace First_Form_App
 {
@@ -147,6 +148,64 @@ namespace First_Form_App
                 }
             }
         }
+        //items 
+       
+
+        private void Items()
+        {
+            Item Plain_cookies = new Item();
+            Plain_cookies.Name = "Plain cookies";
+            Plain_cookies.Desc = "It's not much, but it's something";
+            Plain_cookies.Stats = "Gives you +1 cookie on button press";
+            Plain_cookies.Rarity = 1;
+
+
+
+            Item Chocolate_chip_cookie = new Item();
+            Chocolate_chip_cookie.Name = "Chocolate chip cookie";
+            Chocolate_chip_cookie.Desc = "This is the cookie your grandma has been baking this all time.";
+            Chocolate_chip_cookie.Stats = "Gives your granma cookie production multiplier +10%";
+            Chocolate_chip_cookie.Rarity = 1;
+
+            Item White_chocolate_cookies = new Item();
+            White_chocolate_cookies.Name = "White chocolate cookies";
+            White_chocolate_cookies.Desc = "I know what you'll say. It's just cocoa butter! It's not real chocolate!Oh please";
+            White_chocolate_cookies.Stats = "Gives your granpa exp production multiplier +10%";
+            White_chocolate_cookies.Rarity = 1;
+
+            Item Yogurt_cookies = new Item();
+            Yogurt_cookies.Name = "Yogurt cookies";
+            Yogurt_cookies.Desc = "These cookies have seen things.";
+            Yogurt_cookies.Stats = "Gives you lvl up on grandma every 10 s";
+            Yogurt_cookies.Rarity = 2;
+
+            Item Macarons = new Item();
+            Macarons.Name = "Macarons";
+            Macarons.Desc = "It's like spraying perfume into your mouth! *inser lemmy face*";
+            Macarons.Stats = "Can be traded for 1 lvl";
+            Macarons.Rarity = 2;
+
+            Item Double_chip_cookies = new Item();
+            Double_chip_cookies.Name = "Double - chip cookies";
+            Double_chip_cookies.Desc = "DOUBLE THE CHIPS DOUBLE THE TASTY(double the calories)";
+            Double_chip_cookies.Stats = "!!!Double everything!!!";
+            Double_chip_cookies.Rarity = 3;
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         //DEBUG Add grandmas
         private void btnGrandmaDebug_Click(object sender, EventArgs e)
