@@ -79,19 +79,21 @@
             this.lblUltra = new System.Windows.Forms.Label();
             this.lblLootBoxCookies = new System.Windows.Forms.Label();
             this.lblMoney = new System.Windows.Forms.Label();
-            this.tabDebugInfo = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabRecipeBook = new System.Windows.Forms.TabPage();
+            this.btnNeke = new System.Windows.Forms.Button();
             this.lblScore = new System.Windows.Forms.Label();
-            this.tabDebugAdd = new System.Windows.Forms.TabPage();
+            this.tabDebugInfo = new System.Windows.Forms.TabPage();
             this.btnCookieDebug = new System.Windows.Forms.Button();
-            this.textboxGrandmaDebug = new System.Windows.Forms.TextBox();
-            this.textboxCookieDebug = new System.Windows.Forms.TextBox();
             this.btnGrandmaDebug = new System.Windows.Forms.Button();
-            this.textboxGrandpaDebug = new System.Windows.Forms.TextBox();
-            this.textboxMotherDebug = new System.Windows.Forms.TextBox();
-            this.textboxFatherDebug = new System.Windows.Forms.TextBox();
             this.btnGrandpaDebug = new System.Windows.Forms.Button();
             this.btnMotherDebug = new System.Windows.Forms.Button();
             this.btnFatherDebug = new System.Windows.Forms.Button();
+            this.textboxGrandmaDebug = new System.Windows.Forms.TextBox();
+            this.textboxCookieDebug = new System.Windows.Forms.TextBox();
+            this.textboxGrandpaDebug = new System.Windows.Forms.TextBox();
+            this.textboxMotherDebug = new System.Windows.Forms.TextBox();
+            this.textboxFatherDebug = new System.Windows.Forms.TextBox();
             this.textboxBrotherDebug = new System.Windows.Forms.TextBox();
             this.textboxSisterDebug = new System.Windows.Forms.TextBox();
             this.btnBrotherDebug = new System.Windows.Forms.Button();
@@ -99,10 +101,8 @@
             this.btnBuyLootBox = new System.Windows.Forms.Button();
             this.lblLootBoxCost = new System.Windows.Forms.Label();
             this.btnLevelUpDebug = new System.Windows.Forms.Button();
+            this.tabDebugAdd = new System.Windows.Forms.TabPage();
             this.tabLootbox = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabRecipeBook = new System.Windows.Forms.TabPage();
-            this.btnNeke = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PesTable)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -114,10 +114,10 @@
             this.tabFather.SuspendLayout();
             this.lblBrother.SuspendLayout();
             this.lblSister.SuspendLayout();
-            this.tabDebugInfo.SuspendLayout();
-            this.tabDebugAdd.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabRecipeBook.SuspendLayout();
+            this.tabDebugInfo.SuspendLayout();
+            this.tabDebugAdd.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCookies
@@ -582,15 +582,6 @@
             this.lblUltra.Size = new System.Drawing.Size(67, 13);
             this.lblUltra.TabIndex = 28;
             this.lblUltra.Text = "Ultra Rare: 0";
-            this.tabControl2.Controls.Add(this.tabLootbox);
-            this.tabControl2.Controls.Add(this.tabDebugAdd);
-            this.tabControl2.Controls.Add(this.tabDebugInfo);
-            this.tabControl2.Controls.Add(this.tabRecipeBook);
-            this.tabControl2.Location = new System.Drawing.Point(468, 303);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(320, 284);
-            this.tabControl2.TabIndex = 26;
             // 
             // lblLootBoxCookies
             // 
@@ -610,6 +601,45 @@
             this.lblMoney.TabIndex = 30;
             this.lblMoney.Text = "Money: 0";
             // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.tabRecipeBook);
+            this.tabControl2.Controls.Add(this.tabLootbox);
+            this.tabControl2.Controls.Add(this.tabDebugAdd);
+            this.tabControl2.Controls.Add(this.tabDebugInfo);
+            this.tabControl2.Location = new System.Drawing.Point(468, 303);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(320, 284);
+            this.tabControl2.TabIndex = 26;
+            // 
+            // tabRecipeBook
+            // 
+            this.tabRecipeBook.Controls.Add(this.btnNeke);
+            this.tabRecipeBook.Location = new System.Drawing.Point(4, 22);
+            this.tabRecipeBook.Name = "tabRecipeBook";
+            this.tabRecipeBook.Size = new System.Drawing.Size(312, 258);
+            this.tabRecipeBook.TabIndex = 3;
+            this.tabRecipeBook.Text = "Recipe book";
+            this.tabRecipeBook.UseVisualStyleBackColor = true;
+            // 
+            // btnNeke
+            // 
+            this.btnNeke.Location = new System.Drawing.Point(4, 4);
+            this.btnNeke.Name = "btnNeke";
+            this.btnNeke.Size = new System.Drawing.Size(75, 23);
+            this.btnNeke.TabIndex = 0;
+            this.btnNeke.Text = "button1";
+            this.btnNeke.UseVisualStyleBackColor = true;
+            // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Location = new System.Drawing.Point(13, 10);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(0, 13);
+            this.lblScore.TabIndex = 18;
+            // 
             // tabDebugInfo
             // 
             this.tabDebugInfo.Controls.Add(this.lblScore);
@@ -621,42 +651,6 @@
             this.tabDebugInfo.Text = "Info";
             this.tabDebugInfo.UseVisualStyleBackColor = true;
             // 
-            // lblScore
-            // 
-            this.lblScore.AutoSize = true;
-            this.lblScore.Location = new System.Drawing.Point(13, 10);
-            this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(47, 13);
-            this.lblScore.TabIndex = 18;
-            this.lblScore.Text = "Score: 0";
-            // 
-            // tabDebugAdd
-            // 
-            this.tabDebugAdd.Controls.Add(this.btnLevelUpDebug);
-            this.tabDebugAdd.Controls.Add(this.lblLootBoxCost);
-            this.tabDebugAdd.Controls.Add(this.btnBuyLootBox);
-            this.tabDebugAdd.Controls.Add(this.btnSisterDebug);
-            this.tabDebugAdd.Controls.Add(this.btnBrotherDebug);
-            this.tabDebugAdd.Controls.Add(this.textboxSisterDebug);
-            this.tabDebugAdd.Controls.Add(this.textboxBrotherDebug);
-            this.tabDebugAdd.Controls.Add(this.textboxFatherDebug);
-            this.tabDebugAdd.Controls.Add(this.textboxMotherDebug);
-            this.tabDebugAdd.Controls.Add(this.textboxGrandpaDebug);
-            this.tabDebugAdd.Controls.Add(this.textboxCookieDebug);
-            this.tabDebugAdd.Controls.Add(this.textboxGrandmaDebug);
-            this.tabDebugAdd.Controls.Add(this.btnFatherDebug);
-            this.tabDebugAdd.Controls.Add(this.btnMotherDebug);
-            this.tabDebugAdd.Controls.Add(this.btnGrandpaDebug);
-            this.tabDebugAdd.Controls.Add(this.btnGrandmaDebug);
-            this.tabDebugAdd.Controls.Add(this.btnCookieDebug);
-            this.tabDebugAdd.Location = new System.Drawing.Point(4, 22);
-            this.tabDebugAdd.Name = "tabDebugAdd";
-            this.tabDebugAdd.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDebugAdd.Size = new System.Drawing.Size(312, 258);
-            this.tabDebugAdd.TabIndex = 0;
-            this.tabDebugAdd.Text = "Add";
-            this.tabDebugAdd.UseVisualStyleBackColor = true;
-            // 
             // btnCookieDebug
             // 
             this.btnCookieDebug.Location = new System.Drawing.Point(135, 6);
@@ -666,22 +660,6 @@
             this.btnCookieDebug.Text = "Add cookies";
             this.btnCookieDebug.UseVisualStyleBackColor = true;
             this.btnCookieDebug.Click += new System.EventHandler(this.btnCookieDebug_Click);
-            // 
-            // textboxGrandmaDebug
-            // 
-            this.textboxGrandmaDebug.Location = new System.Drawing.Point(3, 32);
-            this.textboxGrandmaDebug.Name = "textboxGrandmaDebug";
-            this.textboxGrandmaDebug.Size = new System.Drawing.Size(126, 20);
-            this.textboxGrandmaDebug.TabIndex = 2;
-            this.textboxGrandmaDebug.TextChanged += new System.EventHandler(this.textboxGrandmaDebug_TextChanged);
-            // 
-            // textboxCookieDebug
-            // 
-            this.textboxCookieDebug.Location = new System.Drawing.Point(3, 6);
-            this.textboxCookieDebug.Name = "textboxCookieDebug";
-            this.textboxCookieDebug.Size = new System.Drawing.Size(126, 20);
-            this.textboxCookieDebug.TabIndex = 0;
-            this.textboxCookieDebug.TextChanged += new System.EventHandler(this.textboxCookieDebug_TextChanged);
             // 
             // btnGrandmaDebug
             // 
@@ -693,30 +671,6 @@
             this.btnGrandmaDebug.Text = "Add grandmas";
             this.btnGrandmaDebug.UseVisualStyleBackColor = true;
             this.btnGrandmaDebug.Click += new System.EventHandler(this.btnGrandmaDebug_Click);
-            // 
-            // textboxGrandpaDebug
-            // 
-            this.textboxGrandpaDebug.Location = new System.Drawing.Point(3, 59);
-            this.textboxGrandpaDebug.Name = "textboxGrandpaDebug";
-            this.textboxGrandpaDebug.Size = new System.Drawing.Size(126, 20);
-            this.textboxGrandpaDebug.TabIndex = 4;
-            this.textboxGrandpaDebug.TextChanged += new System.EventHandler(this.textboxGrandpaDebug_TextChanged);
-            // 
-            // textboxMotherDebug
-            // 
-            this.textboxMotherDebug.Location = new System.Drawing.Point(3, 85);
-            this.textboxMotherDebug.Name = "textboxMotherDebug";
-            this.textboxMotherDebug.Size = new System.Drawing.Size(126, 20);
-            this.textboxMotherDebug.TabIndex = 5;
-            this.textboxMotherDebug.TextChanged += new System.EventHandler(this.textboxMotherDebug_TextChanged);
-            // 
-            // textboxFatherDebug
-            // 
-            this.textboxFatherDebug.Location = new System.Drawing.Point(3, 111);
-            this.textboxFatherDebug.Name = "textboxFatherDebug";
-            this.textboxFatherDebug.Size = new System.Drawing.Size(126, 20);
-            this.textboxFatherDebug.TabIndex = 6;
-            this.textboxFatherDebug.TextChanged += new System.EventHandler(this.textboxFatherDebug_TextChanged);
             // 
             // btnGrandpaDebug
             // 
@@ -747,6 +701,46 @@
             this.btnFatherDebug.Text = "Add fathers";
             this.btnFatherDebug.UseVisualStyleBackColor = true;
             this.btnFatherDebug.Click += new System.EventHandler(this.btnFatherDebug_Click);
+            // 
+            // textboxGrandmaDebug
+            // 
+            this.textboxGrandmaDebug.Location = new System.Drawing.Point(3, 32);
+            this.textboxGrandmaDebug.Name = "textboxGrandmaDebug";
+            this.textboxGrandmaDebug.Size = new System.Drawing.Size(126, 20);
+            this.textboxGrandmaDebug.TabIndex = 2;
+            this.textboxGrandmaDebug.TextChanged += new System.EventHandler(this.textboxGrandmaDebug_TextChanged);
+            // 
+            // textboxCookieDebug
+            // 
+            this.textboxCookieDebug.Location = new System.Drawing.Point(3, 6);
+            this.textboxCookieDebug.Name = "textboxCookieDebug";
+            this.textboxCookieDebug.Size = new System.Drawing.Size(126, 20);
+            this.textboxCookieDebug.TabIndex = 0;
+            this.textboxCookieDebug.TextChanged += new System.EventHandler(this.textboxCookieDebug_TextChanged);
+            // 
+            // textboxGrandpaDebug
+            // 
+            this.textboxGrandpaDebug.Location = new System.Drawing.Point(3, 59);
+            this.textboxGrandpaDebug.Name = "textboxGrandpaDebug";
+            this.textboxGrandpaDebug.Size = new System.Drawing.Size(126, 20);
+            this.textboxGrandpaDebug.TabIndex = 4;
+            this.textboxGrandpaDebug.TextChanged += new System.EventHandler(this.textboxGrandpaDebug_TextChanged);
+            // 
+            // textboxMotherDebug
+            // 
+            this.textboxMotherDebug.Location = new System.Drawing.Point(3, 85);
+            this.textboxMotherDebug.Name = "textboxMotherDebug";
+            this.textboxMotherDebug.Size = new System.Drawing.Size(126, 20);
+            this.textboxMotherDebug.TabIndex = 5;
+            this.textboxMotherDebug.TextChanged += new System.EventHandler(this.textboxMotherDebug_TextChanged);
+            // 
+            // textboxFatherDebug
+            // 
+            this.textboxFatherDebug.Location = new System.Drawing.Point(3, 111);
+            this.textboxFatherDebug.Name = "textboxFatherDebug";
+            this.textboxFatherDebug.Size = new System.Drawing.Size(126, 20);
+            this.textboxFatherDebug.TabIndex = 6;
+            this.textboxFatherDebug.TextChanged += new System.EventHandler(this.textboxFatherDebug_TextChanged);
             // 
             // textboxBrotherDebug
             // 
@@ -799,9 +793,8 @@
             this.lblLootBoxCost.AutoSize = true;
             this.lblLootBoxCost.Location = new System.Drawing.Point(40, 194);
             this.lblLootBoxCost.Name = "lblLootBoxCost";
-            this.lblLootBoxCost.Size = new System.Drawing.Size(89, 13);
+            this.lblLootBoxCost.Size = new System.Drawing.Size(0, 13);
             this.lblLootBoxCost.TabIndex = 15;
-            this.lblLootBoxCost.Text = "Loot box cost: 50";
             // 
             // btnLevelUpDebug
             // 
@@ -813,6 +806,33 @@
             this.btnLevelUpDebug.UseVisualStyleBackColor = true;
             this.btnLevelUpDebug.Click += new System.EventHandler(this.btnLevelUpDebug_Click);
             // 
+            // tabDebugAdd
+            // 
+            this.tabDebugAdd.Controls.Add(this.btnLevelUpDebug);
+            this.tabDebugAdd.Controls.Add(this.lblLootBoxCost);
+            this.tabDebugAdd.Controls.Add(this.btnBuyLootBox);
+            this.tabDebugAdd.Controls.Add(this.btnSisterDebug);
+            this.tabDebugAdd.Controls.Add(this.btnBrotherDebug);
+            this.tabDebugAdd.Controls.Add(this.textboxSisterDebug);
+            this.tabDebugAdd.Controls.Add(this.textboxBrotherDebug);
+            this.tabDebugAdd.Controls.Add(this.textboxFatherDebug);
+            this.tabDebugAdd.Controls.Add(this.textboxMotherDebug);
+            this.tabDebugAdd.Controls.Add(this.textboxGrandpaDebug);
+            this.tabDebugAdd.Controls.Add(this.textboxCookieDebug);
+            this.tabDebugAdd.Controls.Add(this.textboxGrandmaDebug);
+            this.tabDebugAdd.Controls.Add(this.btnFatherDebug);
+            this.tabDebugAdd.Controls.Add(this.btnMotherDebug);
+            this.tabDebugAdd.Controls.Add(this.btnGrandpaDebug);
+            this.tabDebugAdd.Controls.Add(this.btnGrandmaDebug);
+            this.tabDebugAdd.Controls.Add(this.btnCookieDebug);
+            this.tabDebugAdd.Location = new System.Drawing.Point(4, 22);
+            this.tabDebugAdd.Name = "tabDebugAdd";
+            this.tabDebugAdd.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDebugAdd.Size = new System.Drawing.Size(312, 258);
+            this.tabDebugAdd.TabIndex = 0;
+            this.tabDebugAdd.Text = "Add";
+            this.tabDebugAdd.UseVisualStyleBackColor = true;
+            // 
             // tabLootbox
             // 
             this.tabLootbox.Location = new System.Drawing.Point(4, 22);
@@ -821,37 +841,6 @@
             this.tabLootbox.TabIndex = 2;
             this.tabLootbox.Text = "Lootboxes";
             this.tabLootbox.UseVisualStyleBackColor = true;
-            // 
-            // tabControl2
-            // 
-            this.tabControl2.Controls.Add(this.tabLootbox);
-            this.tabControl2.Controls.Add(this.tabDebugAdd);
-            this.tabControl2.Controls.Add(this.tabDebugInfo);
-            this.tabControl2.Location = new System.Drawing.Point(468, 303);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(320, 284);
-            this.tabControl2.TabIndex = 26;
-            // 
-            // tabRecipeBook
-            // 
-            this.tabRecipeBook.Controls.Add(this.btnNeke);
-            this.tabRecipeBook.Location = new System.Drawing.Point(4, 22);
-            this.tabRecipeBook.Name = "tabRecipeBook";
-            this.tabRecipeBook.Size = new System.Drawing.Size(312, 258);
-            this.tabRecipeBook.TabIndex = 3;
-            this.tabRecipeBook.Text = "Recipe book";
-            this.tabRecipeBook.UseVisualStyleBackColor = true;
-            // 
-            // btnNeke
-            // 
-            this.btnNeke.Location = new System.Drawing.Point(4, 4);
-            this.btnNeke.Name = "btnNeke";
-            this.btnNeke.Size = new System.Drawing.Size(75, 23);
-            this.btnNeke.TabIndex = 0;
-            this.btnNeke.Text = "button1";
-            this.btnNeke.UseVisualStyleBackColor = true;
-            this.btnNeke.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -896,14 +885,12 @@
             this.lblBrother.PerformLayout();
             this.lblSister.ResumeLayout(false);
             this.lblSister.PerformLayout();
+            this.tabControl2.ResumeLayout(false);
+            this.tabRecipeBook.ResumeLayout(false);
             this.tabDebugInfo.ResumeLayout(false);
             this.tabDebugInfo.PerformLayout();
             this.tabDebugAdd.ResumeLayout(false);
             this.tabDebugAdd.PerformLayout();
-            this.tabControl2.ResumeLayout(false);
-            this.tabDebugInfo.ResumeLayout(false);
-            this.tabDebugInfo.PerformLayout();
-            this.tabRecipeBook.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -959,8 +946,11 @@
         private System.Windows.Forms.Label lblUltra;
         private System.Windows.Forms.Label lblLootBoxCookies;
         private System.Windows.Forms.Label lblMoney;
-        private System.Windows.Forms.TabPage tabDebugInfo;
-        private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabRecipeBook;
+        private System.Windows.Forms.Button btnNeke;
+        private System.Windows.Forms.TabPage tabLootbox;
         private System.Windows.Forms.TabPage tabDebugAdd;
         private System.Windows.Forms.Button btnLevelUpDebug;
         private System.Windows.Forms.Label lblLootBoxCost;
@@ -979,11 +969,8 @@
         private System.Windows.Forms.Button btnGrandpaDebug;
         private System.Windows.Forms.Button btnGrandmaDebug;
         private System.Windows.Forms.Button btnCookieDebug;
-        private System.Windows.Forms.TabPage tabLootbox;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage tabRecipeBook;
-        private System.Windows.Forms.Button btnNeke;
+        private System.Windows.Forms.TabPage tabDebugInfo;
+        private System.Windows.Forms.Label lblScore;
     }
 }
 
