@@ -75,7 +75,6 @@ namespace First_Form_App
         private void CookieTimer_Tick(object sender, EventArgs e)
         {
             CookieTimer.Interval = timerinterval;
-            secondtimer++;
             
             cookiesprev = cookies;
 
@@ -87,7 +86,15 @@ namespace First_Form_App
 
             lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxCookies) + " (" + Convert.ToString(LootBoxCookiesCost) + ")";
 
-            lblMoney.Text = "Money: " + Convert.ToString(Money);
+            if (fathers != 0)
+            {
+                secondtimer++;
+                lblMoney.Text = "Money: " + Convert.ToString(Money);
+            }
+            else
+            {
+                lblMoney.Text = "Money: 0";
+            }
 
             LoveUpdate();
             LootboxUpdate();
