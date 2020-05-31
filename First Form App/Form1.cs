@@ -23,13 +23,14 @@ namespace First_Form_App
         public int grandmas, grandpas, mothers, fathers, brothers, sisters;
         public int cookieCPS, grandmaCPS, grandpaCPS;
         public int cookiemultiplier = 1, grandmamultiplier = 1;
-        public int grandmavalue = 20, grandpavalue = 1000, mothervalue, fathervalue, brothervalue, sistervalue;
+        public int grandmavalue = 20, grandpavalue = 1000, mothervalue, fathervalue = 1000, brothervalue, sistervalue;
         public int level = 1;
         public int LootBoxCount = 0;
         public int Ultra = 0, Rare = 0, Common = 0, LootBoxCookies = 0, LootBoxCookiesCost = 0;
+        public int Money = 0, MoneyIncome = 0;
 
-        
-       
+
+
 
         private int timerinterval = 1000;
         private bool corgibool = true;
@@ -46,7 +47,7 @@ namespace First_Form_App
             Score++;
             CookieUpdate();
             TimerStart();
-            
+
         }
 
         //-----------FAMILY BUTTONS-----------//
@@ -113,9 +114,14 @@ namespace First_Form_App
             debugcookies = Convert.ToInt32(textboxCookieDebug.Text);
         }
 
+        private void btnFather_Click(object sender, EventArgs e)
+        {
+            FatherBuy();
+        }
+
         private void btnBuyLootBox_Click(object sender, EventArgs e)
         {
-            if(cookies >= 50)
+            if (cookies >= 50)
             {
                 LootBoxCount++;
                 cookies -= 50;
@@ -128,14 +134,14 @@ namespace First_Form_App
                     LootBoxCookies += rnd.Next(30, 71);
                     MessageBox.Show("OOF!");
                     cookies += LootBoxCookies;
-                    
+
                 }
-                else if(Chance <= 94 && Chance > 50)
+                else if (Chance <= 94 && Chance > 50)
                 {
                     MessageBox.Show("COMMON!");
                     Common++;
-                }   
-                else if(Chance >= 95 && Chance < 99)
+                }
+                else if (Chance >= 95 && Chance < 99)
                 {
                     MessageBox.Show("RARE!");
                     Rare++;
@@ -260,13 +266,13 @@ namespace First_Form_App
         //Updates love xp bar
         private void LoveUpdate()
         {
-            if (barLove.Value >= barLove.Maximum){
+            if (barLove.Value >= barLove.Maximum) {
                 level++;
                 MessageBox.Show("You leveled up!");
                 switch (level)
                 {
                     case 1:
-                        
+
                         barLove.Maximum = 400;
                         break;
 
@@ -300,11 +306,11 @@ namespace First_Form_App
                         barLove.Maximum = 5440;
                         break;
                     case 9:
-                        barLove.Value= 0;
+                        barLove.Value = 0;
                         barLove.Maximum = 6480;
                         break;
                     case 10:
-                        barLove.Value= 0;
+                        barLove.Value = 0;
                         barLove.Maximum = 7600;
                         break;
                 }
@@ -313,7 +319,7 @@ namespace First_Form_App
             }
 
             lblLoveValue.Text = barLove.Value + "/" + barLove.Maximum + " , You are level " + level;
-            
+
 
         }
 
@@ -346,16 +352,16 @@ namespace First_Form_App
             lblGrandpaCPS.Text = "XP/s: " + grandpaCPS;
             lblGrandpaCost.Text = "Cost: " + grandpavalue;
 
-            lblMothers.Text = "Mother level: " + mothers;            
+            lblMothers.Text = "Mother level: " + mothers;
             lblMotherCost.Text = "Cost: " + mothervalue;
 
-            lblFathers.Text = "Father level: " + fathers;            
+            lblFathers.Text = "Father level: " + fathers;
             lblFatherCost.Text = "Cost: " + fathervalue;
 
-            lblBrothers.Text = "Brother level: " + brothers;            
+            lblBrothers.Text = "Brother level: " + brothers;
             lblBrotherCost.Text = "Cost: " + brothervalue;
 
-            lblSisters.Text = "Sister level: " + sisters;           
+            lblSisters.Text = "Sister level: " + sisters;
             lblSisterCost.Text = "Cost: " + sistervalue;
         }
 
@@ -384,6 +390,21 @@ namespace First_Form_App
             }
         }
 
+        //Father buy function
+        private void FatherBuy()
+        {
+            if (cookies >= fathervalue)
+            {
+                cookies -= fathervalue;
+                fathers++;
+                fathervalue = Convert.ToInt32(fathervalue * (Math.Pow(multiplier, fathers)));
+                CookieUpdate();
+                FamilyUpdate();
+            }
+            else MessageBox.Show("You don't have enough cookies!");
+        }
+
+        //Grandma buy function
         private void GrandmaBuy()
         {
             if (cookies >= grandmavalue)
@@ -396,6 +417,7 @@ namespace First_Form_App
             }
             else MessageBox.Show("You don't have enough cookies!");
         }
+
 
         //Level limits
         private void LevelLimits()
