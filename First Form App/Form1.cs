@@ -33,8 +33,6 @@ namespace First_Form_App
         public int Money = 0, MoneyIncome = 0;
         public int secondtimer;
 
-
-
         private int timerinterval = 1000;
         private bool corgibool = true;
         private bool boolinterval = false;
@@ -50,7 +48,6 @@ namespace First_Form_App
             Score++;
             CookieUpdate();
             TimerStart();
-
         }
 
         //-----------FAMILY BUTTONS-----------//
@@ -207,25 +204,6 @@ namespace First_Form_App
             Double_chip_cookies.Stats = "!!!Double everything!!!";
             Double_chip_cookies.Rarity = 3;
             
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         //DEBUG Add grandmas
