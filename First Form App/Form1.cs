@@ -28,7 +28,7 @@ namespace First_Form_App
         public int LootBoxCount = 0;
         public int Ultra = 0, Rare = 0, Common = 0, LootBoxCookies = 0, LootBoxCookiesCost = 0;
 
-        public int a;
+        
        
 
         private int timerinterval = 1000;
