@@ -37,6 +37,8 @@ namespace First_Form_App
         private bool corgibool = true;
         private bool boolinterval = false;
 
+        public string NASTJA = "LOVE";
+
         Random rnd = new Random();
 
         //Cookie button
