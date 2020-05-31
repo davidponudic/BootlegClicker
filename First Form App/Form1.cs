@@ -30,7 +30,7 @@ namespace First_Form_App
         public int Ultra = 0, Rare = 0, Common = 0, LootBoxCookies = 0, LootBoxCookiesCost = 0;
        
         public int Money = 0, MoneyIncome = 0;
-
+        public int secondtimer;
 
 
 
@@ -74,7 +74,8 @@ namespace First_Form_App
         private void CookieTimer_Tick(object sender, EventArgs e)
         {
             CookieTimer.Interval = timerinterval;
-
+            secondtimer++;
+            
             cookiesprev = cookies;
 
             CookieAddition();
@@ -83,12 +84,18 @@ namespace First_Form_App
 
             barLove.Value += grandpas;
 
+            lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxCookies) + " (" + Convert.ToString(LootBoxCookiesCost) + ")";
+
+            lblMoney.Text = "Money: " + Convert.ToString(Money);
+
             LoveUpdate();
             LootboxUpdate();
             CookieUpdate();
             FamilyUpdate();
             ScoreUpdate();
             PictureChange();
+            FatherIncome();
+
         }
 
         //Starts timer when button is first clicked
@@ -448,6 +455,13 @@ namespace First_Form_App
                 }
                 else MessageBox.Show("Level up to increase build limit!");
             else MessageBox.Show("You don't have enough cookies!");
+        }
+        private void FatherIncome()
+        {
+            if (secondtimer % 2 == 0)
+            {
+                Money += 100;
+            }
         }
 
         //Level limits
