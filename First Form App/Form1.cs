@@ -84,7 +84,7 @@ namespace First_Form_App
 
             barLove.Value += grandpas;
 
-            lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxCookies) + " (" + Convert.ToString(LootBoxCookiesCost) + ")"
+            lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxCookies) + " (" + Convert.ToString(LootBoxCookiesCost) + ")";
 
             LoveUpdate();
             LootboxUpdate();
