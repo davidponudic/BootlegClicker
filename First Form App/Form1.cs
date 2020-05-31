@@ -84,17 +84,7 @@ namespace First_Form_App
 
             barLove.Value += grandpas;
 
-            lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxCookies) + " (" + Convert.ToString(LootBoxCookiesCost) + ")";
-
-            if (fathers != 0)
-            {
-                secondtimer++;
-                lblMoney.Text = "Money: " + Convert.ToString(Money);
-            }
-            else
-            {
-                lblMoney.Text = "Money: 0";
-            }
+            lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxCookies) + " (" + Convert.ToString(LootBoxCookiesCost) + ")"
 
             LoveUpdate();
             LootboxUpdate();
@@ -511,10 +501,20 @@ namespace First_Form_App
         }
         private void FatherIncome()
         {
-            if (secondtimer % 2 == 0)
+            if (fathers != 0)
             {
-                Money += 100;
+                if (secondtimer % 2 == 0)
+                {
+                    Money += 100;
+                }
+                secondtimer++;
+                lblMoney.Text = "Money: " + Convert.ToString(Money);
             }
+            else
+            {
+                lblMoney.Text = "Money: 0";
+            }
+            
         }
 
         //Level limits
