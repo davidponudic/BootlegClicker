@@ -427,6 +427,7 @@
             this.btnFather.TabIndex = 1;
             this.btnFather.Text = "Call father";
             this.btnFather.UseVisualStyleBackColor = true;
+            this.btnFather.Click += new System.EventHandler(this.btnFather_Click);
             // 
             // lblFathers
             // 
