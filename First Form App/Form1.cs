@@ -121,11 +121,6 @@ namespace First_Form_App
             FamilyUpdate();
         }
 
-        private void lblCookies_Click(object sender, EventArgs e)
-        {
-
-        }
-
         //DEBUG Convert grandmas input to int
         private void textboxGrandmaDebug_TextChanged(object sender, EventArgs e)
         {
