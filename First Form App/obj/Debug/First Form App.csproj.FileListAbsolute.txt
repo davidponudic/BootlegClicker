@@ -36,3 +36,13 @@ F:\BootlegClicker\First Form App\obj\Debug\First Form App.pdb
 F:\BootlegClicker\First Form App\bin\Debug\First Form App.exe.config
 F:\BootlegClicker\First Form App\bin\Debug\First Form App.exe
 F:\BootlegClicker\First Form App\bin\Debug\First Form App.pdb
+C:\Users\Alen\Source\Repos\davidponudic\BootlegClicker\First Form App\obj\Debug\First Form App.csprojAssemblyReference.cache
+C:\Users\Alen\Source\Repos\davidponudic\BootlegClicker\First Form App\obj\Debug\First_Form_App.Form1.resources
+C:\Users\Alen\Source\Repos\davidponudic\BootlegClicker\First Form App\obj\Debug\First_Form_App.Properties.Resources.resources
+C:\Users\Alen\Source\Repos\davidponudic\BootlegClicker\First Form App\obj\Debug\First Form App.csproj.GenerateResource.cache
+C:\Users\Alen\Source\Repos\davidponudic\BootlegClicker\First Form App\obj\Debug\First Form App.csproj.CoreCompileInputs.cache
+C:\Users\Alen\Source\Repos\davidponudic\BootlegClicker\First Form App\obj\Debug\First Form App.exe
+C:\Users\Alen\Source\Repos\davidponudic\BootlegClicker\First Form App\obj\Debug\First Form App.pdb
+C:\Users\Alen\source\repos\davidponudic\BootlegClicker\First Form App\bin\Debug\First Form App.exe.config
+C:\Users\Alen\source\repos\davidponudic\BootlegClicker\First Form App\bin\Debug\First Form App.exe
+C:\Users\Alen\source\repos\davidponudic\BootlegClicker\First Form App\bin\Debug\First Form App.pdb

@@ -404,6 +404,7 @@ namespace First_Form_App
             else MessageBox.Show("You don't have enough cookies!");
         }
 
+        
         //Grandma buy function
         private void GrandmaBuy()
         {

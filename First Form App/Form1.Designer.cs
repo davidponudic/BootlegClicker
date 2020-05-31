@@ -99,6 +99,7 @@
             this.lblRare = new System.Windows.Forms.Label();
             this.lblUltra = new System.Windows.Forms.Label();
             this.lblLootBoxCookies = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PesTable)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -265,6 +266,7 @@
             // 
             // tabGrandma
             // 
+            this.tabGrandma.Controls.Add(this.label1);
             this.tabGrandma.Controls.Add(this.lblGrandmaCPS);
             this.tabGrandma.Controls.Add(this.pictureBox1);
             this.tabGrandma.Controls.Add(this.lblGrandmas);
@@ -799,6 +801,15 @@
             this.lblLootBoxCookies.TabIndex = 29;
             this.lblLootBoxCookies.Text = "Cookies: 0";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -922,6 +933,7 @@
         private System.Windows.Forms.Label lblRare;
         private System.Windows.Forms.Label lblUltra;
         private System.Windows.Forms.Label lblLootBoxCookies;
+        private System.Windows.Forms.Label label1;
     }
 }
 
