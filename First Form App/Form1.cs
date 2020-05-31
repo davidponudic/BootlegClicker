@@ -220,6 +220,11 @@ namespace First_Form_App
 
 
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //DEBUG Add grandmas
         private void btnGrandmaDebug_Click(object sender, EventArgs e)
         {
@@ -482,6 +487,7 @@ namespace First_Form_App
             else MessageBox.Show("You don't have enough cookies!");
         }
 
+        
         //Grandma buy function
         private void GrandmaBuy()
         {
