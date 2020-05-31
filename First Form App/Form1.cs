@@ -194,7 +194,7 @@ namespace First_Form_App
 
             Item Macarons = new Item();
             Macarons.Name = "Macarons";
-            Macarons.Desc = "It's like spraying perfume into your mouth! *inser lemmy face*";
+            Macarons.Desc = "It's like spraying perfume into your mouth! *insert lenny face*";
             Macarons.Stats = "Can be traded for 1 lvl";
             Macarons.Rarity = 2;
 
