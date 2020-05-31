@@ -78,7 +78,6 @@
             this.btnGrandmaDebug = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabLootbox = new System.Windows.Forms.TabPage();
-            this.lblLootBoxCount = new System.Windows.Forms.Label();
             this.tabDebugAdd = new System.Windows.Forms.TabPage();
             this.btnLevelUpDebug = new System.Windows.Forms.Button();
             this.lblLootBoxCost = new System.Windows.Forms.Label();
@@ -94,6 +93,7 @@
             this.textboxMotherDebug = new System.Windows.Forms.TextBox();
             this.textboxGrandpaDebug = new System.Windows.Forms.TextBox();
             this.tabDebugInfo = new System.Windows.Forms.TabPage();
+            this.lblLootBoxCount = new System.Windows.Forms.Label();
             this.lblChance = new System.Windows.Forms.Label();
             this.lblCommon = new System.Windows.Forms.Label();
             this.lblRare = new System.Windows.Forms.Label();
@@ -330,6 +330,7 @@
             this.btnGrandpa.TabIndex = 3;
             this.btnGrandpa.Text = "Call grandpa";
             this.btnGrandpa.UseVisualStyleBackColor = true;
+            this.btnGrandpa.Click += new System.EventHandler(this.btnGrandpa_Click);
             // 
             // lblGrandpaCost
             // 
@@ -587,15 +588,6 @@
             this.tabLootbox.Text = "Lootboxes";
             this.tabLootbox.UseVisualStyleBackColor = true;
             // 
-            // lblLootBoxCount
-            // 
-            this.lblLootBoxCount.AutoSize = true;
-            this.lblLootBoxCount.Location = new System.Drawing.Point(13, 10);
-            this.lblLootBoxCount.Name = "lblLootBoxCount";
-            this.lblLootBoxCount.Size = new System.Drawing.Size(90, 13);
-            this.lblLootBoxCount.TabIndex = 27;
-            this.lblLootBoxCount.Text = "Loot box count: 0";
-            // 
             // tabDebugAdd
             // 
             this.tabDebugAdd.Controls.Add(this.btnLevelUpDebug);
@@ -752,6 +744,15 @@
             this.tabDebugInfo.TabIndex = 1;
             this.tabDebugInfo.Text = "Info";
             this.tabDebugInfo.UseVisualStyleBackColor = true;
+            // 
+            // lblLootBoxCount
+            // 
+            this.lblLootBoxCount.AutoSize = true;
+            this.lblLootBoxCount.Location = new System.Drawing.Point(13, 10);
+            this.lblLootBoxCount.Name = "lblLootBoxCount";
+            this.lblLootBoxCount.Size = new System.Drawing.Size(90, 13);
+            this.lblLootBoxCount.TabIndex = 27;
+            this.lblLootBoxCount.Text = "Loot box count: 0";
             // 
             // lblChance
             // 
