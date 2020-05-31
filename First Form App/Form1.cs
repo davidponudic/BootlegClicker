@@ -18,7 +18,6 @@ namespace First_Form_App
             InitializeComponent();
         }
 
-
         public int cookies, cookiesprev, Score;
         public int debugcookies, debuggrandmas, debuggrandpas, debugmothers, debugfathers, debugbrothers, debugsisters;
         public int grandmas, grandpas, mothers, fathers, brothers, sisters;
@@ -33,7 +32,7 @@ namespace First_Form_App
         private bool corgibool = true;
         private bool boolinterval = false;
 
-      
+        Random rnd = new Random();
 
         //Cookie button
         private void btnCookies_Click(object sender, EventArgs e)
@@ -111,6 +110,80 @@ namespace First_Form_App
             {
                 LootBoxCount++;
                 cookies -= 50;
+                int Chance = rnd.Next(1, 6);
+                int Chance2 = rnd.Next(1, 6);
+                int Chance3 = rnd.Next(1, 6);
+                lblChance.Text = Convert.ToString(Chance);
+
+                switch(Chance)
+                {
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        if (Chance2==Chance)
+                        {
+                            switch (Chance2)
+                            {
+                                case 1:
+                                    break;
+                                case 2:
+                                    break;
+                                case 3:
+                                    break;
+                                case 4:
+                                    break;
+                                case 5:
+                                    if (Chance3==Chance2)
+                                    {
+                                        switch (Chance3)
+                                        {
+                                            case 1:
+                                                break;
+                                            case 2:
+                                                break;
+                                            case 3:
+                                                break;
+                                            case 4:
+                                                break;
+                                            case 5:
+                                                MessageBox.Show("ULTRA RARE!");
+                                                break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("RARE!");
+                                    }
+                                    break;
+                                    
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("COMMON!");
+                        }
+                        break;
+                        
+                }
+
+                /*if(Chance == 5)
+                {
+                    if(Chance == 5)
+                    {
+                        if(Chance == 5)
+                        {
+                            MessageBox.Show("ULTRA RARE!");
+                        }
+                        MessageBox.Show("RARE!");
+                    }
+                    MessageBox.Show("COMMON!");
+                }*/
             }
         }
 

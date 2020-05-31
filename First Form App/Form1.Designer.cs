@@ -92,6 +92,7 @@
             this.textboxGrandpaDebug = new System.Windows.Forms.TextBox();
             this.tabDebugInfo = new System.Windows.Forms.TabPage();
             this.lblLootBoxCount = new System.Windows.Forms.Label();
+            this.lblChance = new System.Windows.Forms.Label();
             this.btnLevelUpDebug = new System.Windows.Forms.Button();
             this.tabLootbox = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).BeginInit();
@@ -741,6 +742,7 @@
             this.btnLevelUpDebug.Click += new System.EventHandler(this.btnLevelUpDebug_Click);
             // 
             // tabLootbox
+            // lblChance
             // 
             this.tabLootbox.Controls.Add(this.lblLootBoxCount);
             this.tabLootbox.Location = new System.Drawing.Point(4, 22);
@@ -749,12 +751,20 @@
             this.tabLootbox.TabIndex = 2;
             this.tabLootbox.Text = "Lootboxes";
             this.tabLootbox.UseVisualStyleBackColor = true;
+            this.lblChance.AutoSize = true;
+            this.lblChance.Location = new System.Drawing.Point(138, 478);
+            this.lblChance.Name = "lblChance";
+            this.lblChance.Size = new System.Drawing.Size(13, 13);
+            this.lblChance.TabIndex = 28;
+            this.lblChance.Text = "0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 601);
+            this.Controls.Add(this.lblChance);
+            this.Controls.Add(this.lblLootBoxCount);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.lblLoveValue);
             this.Controls.Add(this.tabControl1);
@@ -864,6 +874,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnLevelUpDebug;
         private System.Windows.Forms.TabPage tabLootbox;
+        private System.Windows.Forms.Label lblChance;
     }
 }
 
