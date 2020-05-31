@@ -50,7 +50,7 @@ namespace First_Form_App
         //-----------FAMILY BUTTONS-----------//
 
         //Sets how fast family prices grow
-        public double multiplier = 1.1;
+        public double multiplier = 1.04;
 
         //Grandma button
         private void btnGrandma_Click(object sender, EventArgs e)
@@ -182,6 +182,12 @@ namespace First_Form_App
             debugsisters = Convert.ToInt32(textboxSisterDebug.Text);
         }
 
+        private void btnLevelUpDebug_Click(object sender, EventArgs e)
+        {
+            barLove.Value = barLove.Maximum;
+            LoveUpdate();
+        }
+
         //-----------LEVELS---------//
 
         private void btnXP_1_Click(object sender, EventArgs e)
@@ -303,7 +309,7 @@ namespace First_Form_App
             lblGrandmaCost.Text = "Cost: " + grandmavalue;
 
             lblGrandpas.Text = "Grandpa level: " + grandpas;
-            lblGrandpaCPS.Text = "Bonus grandma CPS: " + grandpaCPS;
+            lblGrandpaCPS.Text = "XP/s: " + grandpaCPS;
             lblGrandpaCost.Text = "Cost: " + grandpavalue;
 
             lblMothers.Text = "Mother level: " + mothers;            
