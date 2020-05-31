@@ -38,7 +38,6 @@ namespace First_Form_App
         private bool boolinterval = false;
 
         public string NASTJA = "LOVE I LOVE YOU";
-        public string NASTJA = "LOVE I LOVE YOU";
 
 
         Random rnd = new Random();
