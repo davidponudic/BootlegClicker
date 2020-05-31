@@ -22,15 +22,18 @@ namespace First_Form_App
         public int cookies, cookiesprev, Score;
         public int debugcookies, debuggrandmas, debuggrandpas, debugmothers, debugfathers, debugbrothers, debugsisters;
         public int grandmas, grandpas, mothers, fathers, brothers, sisters;
-        public int cookieCPS, grandmaCPS, grandpaCPS;
+        public int cookieCPS, grandmaCPS, grandpaXPS;
+        public int grandmalimit = 5, grandpalimit = 5, motherlimit = 1, fatherlimit = 1, brotherlimit = 1, sisterlimit = 1;
         public int cookiemultiplier = 1, grandmamultiplier = 1;
-        public int grandmavalue = 20, grandpavalue = 1000, mothervalue, fathervalue, brothervalue, sistervalue;
+        public int grandmavalue = 20, grandpavalue = 1000, mothervalue, fathervalue = 1000, brothervalue, sistervalue;
         public int level = 1;
         public int LootBoxCount = 0;
         public int Ultra = 0, Rare = 0, Common = 0, LootBoxCookies = 0, LootBoxCookiesCost = 0;
-
-        
        
+        public int Money = 0, MoneyIncome = 0;
+        public int secondtimer;
+
+
 
         private int timerinterval = 1000;
         private bool corgibool = true;
@@ -47,7 +50,7 @@ namespace First_Form_App
             Score++;
             CookieUpdate();
             TimerStart();
-            
+
         }
 
         //-----------FAMILY BUTTONS-----------//
@@ -58,7 +61,12 @@ namespace First_Form_App
         //Grandma button
         private void btnGrandma_Click(object sender, EventArgs e)
         {
-            LevelLimits();
+            GrandmaBuy();
+        }
+
+        private void btnGrandpa_Click(object sender, EventArgs e)
+        {
+            GrandpaBuy();
         }
 
         //---------TIMER--------//
@@ -67,24 +75,27 @@ namespace First_Form_App
         private void CookieTimer_Tick(object sender, EventArgs e)
         {
             CookieTimer.Interval = timerinterval;
-
+            secondtimer++;
+            
             cookiesprev = cookies;
 
             CookieAddition();
 
             Score += (cookies - cookiesprev);
-            lblLootBoxCount.Text = "Loot box count: " + LootBoxCount;
 
-            lblCommon.Text = "Common: " + Convert.ToString(Common);
-            lblRare.Text = "Rare: " + Convert.ToString(Rare);
-            lblUltra.Text = "Ultra Rare: " + Convert.ToString(Ultra);
+            barLove.Value += grandpas;
 
             lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxCookies) + " (" + Convert.ToString(LootBoxCookiesCost) + ")";
 
+            lblMoney.Text = "Money: " + Convert.ToString(Money);
+
+            LoveUpdate();
+            LootboxUpdate();
             CookieUpdate();
             FamilyUpdate();
             ScoreUpdate();
             PictureChange();
+            FatherIncome();
 
         }
 
@@ -114,9 +125,14 @@ namespace First_Form_App
             debugcookies = Convert.ToInt32(textboxCookieDebug.Text);
         }
 
+        private void btnFather_Click(object sender, EventArgs e)
+        {
+            FatherBuy();
+        }
+
         private void btnBuyLootBox_Click(object sender, EventArgs e)
         {
-            if(cookies >= 50)
+            if (cookies >= 50)
             {
                 LootBoxCount++;
                 cookies -= 50;
@@ -129,14 +145,14 @@ namespace First_Form_App
                     LootBoxCookies += rnd.Next(30, 71);
                     MessageBox.Show("OOF!");
                     cookies += LootBoxCookies;
-                    
+
                 }
-                else if(Chance <= 94 && Chance > 50)
+                else if (Chance <= 94 && Chance > 50)
                 {
                     MessageBox.Show("COMMON!");
                     Common++;
-                }   
-                else if(Chance >= 95 && Chance < 99)
+                }
+                else if (Chance >= 95 && Chance < 99)
                 {
                     MessageBox.Show("RARE!");
                     Rare++;
@@ -319,13 +335,14 @@ namespace First_Form_App
         //Updates love xp bar
         private void LoveUpdate()
         {
-            if (barLove.Value >= barLove.Maximum){
+            if (barLove.Value >= barLove.Maximum) {
                 level++;
+                LevelLimits();
                 MessageBox.Show("You leveled up!");
                 switch (level)
                 {
                     case 1:
-                        
+
                         barLove.Maximum = 400;
                         break;
 
@@ -359,11 +376,11 @@ namespace First_Form_App
                         barLove.Maximum = 5440;
                         break;
                     case 9:
-                        barLove.Value= 0;
+                        barLove.Value = 0;
                         barLove.Maximum = 6480;
                         break;
                     case 10:
-                        barLove.Value= 0;
+                        barLove.Value = 0;
                         barLove.Maximum = 7600;
                         break;
                 }
@@ -372,7 +389,7 @@ namespace First_Form_App
             }
 
             lblLoveValue.Text = barLove.Value + "/" + barLove.Maximum + " , You are level " + level;
-            
+
 
         }
 
@@ -402,20 +419,31 @@ namespace First_Form_App
             lblGrandmaCost.Text = "Cost: " + grandmavalue;
 
             lblGrandpas.Text = "Grandpa level: " + grandpas;
-            lblGrandpaCPS.Text = "XP/s: " + grandpaCPS;
+            lblGrandpaCPS.Text = "XP/s: " + grandpaXPS;
             lblGrandpaCost.Text = "Cost: " + grandpavalue;
 
-            lblMothers.Text = "Mother level: " + mothers;            
+            lblMothers.Text = "Mother level: " + mothers;
             lblMotherCost.Text = "Cost: " + mothervalue;
 
-            lblFathers.Text = "Father level: " + fathers;            
+            lblFathers.Text = "Father level: " + fathers;
             lblFatherCost.Text = "Cost: " + fathervalue;
 
-            lblBrothers.Text = "Brother level: " + brothers;            
+            lblBrothers.Text = "Brother level: " + brothers;
             lblBrotherCost.Text = "Cost: " + brothervalue;
 
-            lblSisters.Text = "Sister level: " + sisters;           
+            lblSisters.Text = "Sister level: " + sisters;
             lblSisterCost.Text = "Cost: " + sistervalue;
+        }
+
+        private void LootboxUpdate()
+        {
+            lblLootBoxCount.Text = "Loot box count: " + LootBoxCount;
+
+            lblCommon.Text = "Common: " + Convert.ToString(Common);
+            lblRare.Text = "Rare: " + Convert.ToString(Rare);
+            lblUltra.Text = "Ultra Rare: " + Convert.ToString(Ultra);
+
+            lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxCookies) + " (" + Convert.ToString(LootBoxCookiesCost) + ")";
         }
 
         private void ScoreUpdate()
@@ -443,17 +471,56 @@ namespace First_Form_App
             }
         }
 
-        private void GrandmaBuy()
+        //Father buy function
+        private void FatherBuy()
         {
-            if (cookies >= grandmavalue)
+            if (cookies >= fathervalue)
             {
-                cookies -= grandmavalue;
-                grandmas++;
-                grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                cookies -= fathervalue;
+                fathers++;
+                fathervalue = Convert.ToInt32(fathervalue * (Math.Pow(multiplier, fathers)));
                 CookieUpdate();
                 FamilyUpdate();
             }
             else MessageBox.Show("You don't have enough cookies!");
+        }
+
+        //Grandma buy function
+        private void GrandmaBuy()
+        {
+            if (cookies >= grandmavalue)
+                if (grandmas < grandmalimit)
+                {
+                    cookies -= grandmavalue;
+                    grandmas++;
+                    grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                    CookieUpdate();
+                    FamilyUpdate();
+                }
+                else MessageBox.Show("Level up to increase build limit!");
+            else MessageBox.Show("You don't have enough cookies!");
+        }
+
+        private void GrandpaBuy()
+        {
+            if (cookies >= grandpavalue)
+                if (grandpas < grandpalimit)
+                {
+                    cookies -= grandpavalue;
+                    grandpas++;
+                    grandpavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                    CookieUpdate();
+                    FamilyUpdate();
+                }
+                else MessageBox.Show("Level up to increase build limit!");
+            else MessageBox.Show("You don't have enough cookies!");
+        }
+        private void FatherIncome()
+        {
+            if (secondtimer % 2 == 0)
+            {
+                Money += 100;
+            }
         }
 
         //Level limits
@@ -463,53 +530,73 @@ namespace First_Form_App
             {
                 case 1:
                     {
-                        if (grandmas < 5) GrandmaBuy();
-                        else MessageBox.Show("Level up for more upgrades!"); break;
+                        grandmalimit = 5;
+                        grandpalimit = 5;
+
+                        break;
                     }
                 case 2:
                     {
-                        if (grandmas < 10) GrandmaBuy();
-                        else MessageBox.Show("Level up for more upgrades!"); break;
+                        grandmalimit = 10;
+                        grandpalimit = 10;
+
+                        break;
                     }
                 case 3:
                     {
-                        if (grandmas < 15) GrandmaBuy();
-                        else MessageBox.Show("Level up for more upgrades!"); break;
+                        grandmalimit = 15;
+                        grandpalimit = 15;
+
+                        break;
                     }
                 case 4:
                     {
-                        if (grandmas < 20) GrandmaBuy();
-                        else MessageBox.Show("Level up for more upgrades!"); break;
+                        grandmalimit = 20;
+                        grandpalimit = 20;
+
+                        break;
                     }
                 case 5:
                     {
-                        if (grandmas < 25) GrandmaBuy();
-                        else MessageBox.Show("Level up for more upgrades!"); break;
+                        grandmalimit = 25;
+                        grandpalimit = 25;
+
+                        break;
                     }
                 case 6:
                     {
-                        if (grandmas < 30) GrandmaBuy();
-                        else MessageBox.Show("Level up for more upgrades!"); break;
+                        grandmalimit = 30;
+                        grandpalimit = 30;
+
+                        break;
                     }
                 case 7:
                     {
-                        if (grandmas < 35) GrandmaBuy();
-                        else MessageBox.Show("Level up for more upgrades!"); break;
+                        grandmalimit = 35;
+                        grandpalimit = 35;
+
+                        break;
                     }
                 case 8:
                     {
-                        if (grandmas < 40) GrandmaBuy();
-                        else MessageBox.Show("Level up for more upgrades!"); break;
+                        grandmalimit = 40;
+                        grandpalimit = 40;
+
+                        break;
                     }
                 case 9:
                     {
-                        if (grandmas < 45) GrandmaBuy();
-                        else MessageBox.Show("Level up for more upgrades!"); break;
+                        grandmalimit = 45;
+                        grandpalimit = 45;
+
+                        break;
                     }
                 case 10:
                     {
-                        if (grandmas < 50) GrandmaBuy();
-                        else MessageBox.Show("Level up for more upgrades!"); ; break;
+                        grandmalimit = 50;
+                        grandpalimit = 50;
+
+                        break;
                     }
 
             }

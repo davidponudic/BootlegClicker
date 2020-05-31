@@ -78,7 +78,6 @@
             this.btnGrandmaDebug = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabLootbox = new System.Windows.Forms.TabPage();
-            this.lblLootBoxCount = new System.Windows.Forms.Label();
             this.tabDebugAdd = new System.Windows.Forms.TabPage();
             this.btnLevelUpDebug = new System.Windows.Forms.Button();
             this.lblLootBoxCost = new System.Windows.Forms.Label();
@@ -94,11 +93,13 @@
             this.textboxMotherDebug = new System.Windows.Forms.TextBox();
             this.textboxGrandpaDebug = new System.Windows.Forms.TextBox();
             this.tabDebugInfo = new System.Windows.Forms.TabPage();
+            this.lblLootBoxCount = new System.Windows.Forms.Label();
             this.lblChance = new System.Windows.Forms.Label();
             this.lblCommon = new System.Windows.Forms.Label();
             this.lblRare = new System.Windows.Forms.Label();
             this.lblUltra = new System.Windows.Forms.Label();
             this.lblLootBoxCookies = new System.Windows.Forms.Label();
+            this.lblMoney = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PesTable)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -330,6 +331,7 @@
             this.btnGrandpa.TabIndex = 3;
             this.btnGrandpa.Text = "Call grandpa";
             this.btnGrandpa.UseVisualStyleBackColor = true;
+            this.btnGrandpa.Click += new System.EventHandler(this.btnGrandpa_Click);
             // 
             // lblGrandpaCost
             // 
@@ -426,6 +428,7 @@
             this.btnFather.TabIndex = 1;
             this.btnFather.Text = "Call father";
             this.btnFather.UseVisualStyleBackColor = true;
+            this.btnFather.Click += new System.EventHandler(this.btnFather_Click);
             // 
             // lblFathers
             // 
@@ -587,15 +590,6 @@
             this.tabLootbox.Text = "Lootboxes";
             this.tabLootbox.UseVisualStyleBackColor = true;
             // 
-            // lblLootBoxCount
-            // 
-            this.lblLootBoxCount.AutoSize = true;
-            this.lblLootBoxCount.Location = new System.Drawing.Point(13, 10);
-            this.lblLootBoxCount.Name = "lblLootBoxCount";
-            this.lblLootBoxCount.Size = new System.Drawing.Size(90, 13);
-            this.lblLootBoxCount.TabIndex = 27;
-            this.lblLootBoxCount.Text = "Loot box count: 0";
-            // 
             // tabDebugAdd
             // 
             this.tabDebugAdd.Controls.Add(this.btnLevelUpDebug);
@@ -753,6 +747,15 @@
             this.tabDebugInfo.Text = "Info";
             this.tabDebugInfo.UseVisualStyleBackColor = true;
             // 
+            // lblLootBoxCount
+            // 
+            this.lblLootBoxCount.AutoSize = true;
+            this.lblLootBoxCount.Location = new System.Drawing.Point(13, 10);
+            this.lblLootBoxCount.Name = "lblLootBoxCount";
+            this.lblLootBoxCount.Size = new System.Drawing.Size(90, 13);
+            this.lblLootBoxCount.TabIndex = 27;
+            this.lblLootBoxCount.Text = "Loot box count: 0";
+            // 
             // lblChance
             // 
             this.lblChance.AutoSize = true;
@@ -798,11 +801,21 @@
             this.lblLootBoxCookies.TabIndex = 29;
             this.lblLootBoxCookies.Text = "Cookies: 0";
             // 
+            // lblMoney
+            // 
+            this.lblMoney.AutoSize = true;
+            this.lblMoney.Location = new System.Drawing.Point(56, 427);
+            this.lblMoney.Name = "lblMoney";
+            this.lblMoney.Size = new System.Drawing.Size(51, 13);
+            this.lblMoney.TabIndex = 30;
+            this.lblMoney.Text = "Money: 0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 601);
+            this.Controls.Add(this.lblMoney);
             this.Controls.Add(this.lblLootBoxCookies);
             this.Controls.Add(this.lblUltra);
             this.Controls.Add(this.lblRare);
@@ -921,6 +934,7 @@
         private System.Windows.Forms.Label lblRare;
         private System.Windows.Forms.Label lblUltra;
         private System.Windows.Forms.Label lblLootBoxCookies;
+        private System.Windows.Forms.Label lblMoney;
     }
 }
 
