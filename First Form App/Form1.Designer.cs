@@ -77,7 +77,10 @@
             this.textboxGrandmaDebug = new System.Windows.Forms.TextBox();
             this.btnGrandmaDebug = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabLootbox = new System.Windows.Forms.TabPage();
+            this.lblLootBoxCount = new System.Windows.Forms.Label();
             this.tabDebugAdd = new System.Windows.Forms.TabPage();
+            this.btnLevelUpDebug = new System.Windows.Forms.Button();
             this.lblLootBoxCost = new System.Windows.Forms.Label();
             this.btnBuyLootBox = new System.Windows.Forms.Button();
             this.btnSisterDebug = new System.Windows.Forms.Button();
@@ -91,10 +94,7 @@
             this.textboxMotherDebug = new System.Windows.Forms.TextBox();
             this.textboxGrandpaDebug = new System.Windows.Forms.TextBox();
             this.tabDebugInfo = new System.Windows.Forms.TabPage();
-            this.lblLootBoxCount = new System.Windows.Forms.Label();
             this.lblChance = new System.Windows.Forms.Label();
-            this.btnLevelUpDebug = new System.Windows.Forms.Button();
-            this.tabLootbox = new System.Windows.Forms.TabPage();
             this.lblCommon = new System.Windows.Forms.Label();
             this.lblRare = new System.Windows.Forms.Label();
             this.lblUltra = new System.Windows.Forms.Label();
@@ -113,7 +113,6 @@
             this.tabControl2.SuspendLayout();
             this.tabDebugAdd.SuspendLayout();
             this.tabDebugInfo.SuspendLayout();
-            this.tabLootbox.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCookies
@@ -579,6 +578,24 @@
             this.tabControl2.Size = new System.Drawing.Size(320, 284);
             this.tabControl2.TabIndex = 26;
             // 
+            // tabLootbox
+            // 
+            this.tabLootbox.Location = new System.Drawing.Point(4, 22);
+            this.tabLootbox.Name = "tabLootbox";
+            this.tabLootbox.Size = new System.Drawing.Size(312, 258);
+            this.tabLootbox.TabIndex = 2;
+            this.tabLootbox.Text = "Lootboxes";
+            this.tabLootbox.UseVisualStyleBackColor = true;
+            // 
+            // lblLootBoxCount
+            // 
+            this.lblLootBoxCount.AutoSize = true;
+            this.lblLootBoxCount.Location = new System.Drawing.Point(13, 10);
+            this.lblLootBoxCount.Name = "lblLootBoxCount";
+            this.lblLootBoxCount.Size = new System.Drawing.Size(90, 13);
+            this.lblLootBoxCount.TabIndex = 27;
+            this.lblLootBoxCount.Text = "Loot box count: 0";
+            // 
             // tabDebugAdd
             // 
             this.tabDebugAdd.Controls.Add(this.btnLevelUpDebug);
@@ -605,6 +622,16 @@
             this.tabDebugAdd.TabIndex = 0;
             this.tabDebugAdd.Text = "Add";
             this.tabDebugAdd.UseVisualStyleBackColor = true;
+            // 
+            // btnLevelUpDebug
+            // 
+            this.btnLevelUpDebug.Location = new System.Drawing.Point(135, 216);
+            this.btnLevelUpDebug.Name = "btnLevelUpDebug";
+            this.btnLevelUpDebug.Size = new System.Drawing.Size(92, 21);
+            this.btnLevelUpDebug.TabIndex = 16;
+            this.btnLevelUpDebug.Text = "Level up";
+            this.btnLevelUpDebug.UseVisualStyleBackColor = true;
+            this.btnLevelUpDebug.Click += new System.EventHandler(this.btnLevelUpDebug_Click);
             // 
             // lblLootBoxCost
             // 
@@ -726,37 +753,10 @@
             this.tabDebugInfo.Text = "Info";
             this.tabDebugInfo.UseVisualStyleBackColor = true;
             // 
-            // lblLootBoxCount
-            // 
-            this.lblLootBoxCount.AutoSize = true;
-            this.lblLootBoxCount.Location = new System.Drawing.Point(13, 10);
-            this.lblLootBoxCount.Name = "lblLootBoxCount";
-            this.lblLootBoxCount.Size = new System.Drawing.Size(90, 13);
-            this.lblLootBoxCount.TabIndex = 27;
-            this.lblLootBoxCount.Text = "Loot box count: 0";
-            // 
-            // btnLevelUpDebug
-            // 
-            this.btnLevelUpDebug.Location = new System.Drawing.Point(135, 216);
-            this.btnLevelUpDebug.Name = "btnLevelUpDebug";
-            this.btnLevelUpDebug.Size = new System.Drawing.Size(92, 21);
-            this.btnLevelUpDebug.TabIndex = 16;
-            this.btnLevelUpDebug.Text = "Level up";
-            this.btnLevelUpDebug.UseVisualStyleBackColor = true;
-            this.btnLevelUpDebug.Click += new System.EventHandler(this.btnLevelUpDebug_Click);
-            // 
-            // tabLootbox
             // lblChance
             // 
-            this.tabLootbox.Controls.Add(this.lblLootBoxCount);
-            this.tabLootbox.Location = new System.Drawing.Point(4, 22);
-            this.tabLootbox.Name = "tabLootbox";
-            this.tabLootbox.Size = new System.Drawing.Size(312, 258);
-            this.tabLootbox.TabIndex = 2;
-            this.tabLootbox.Text = "Lootboxes";
-            this.tabLootbox.UseVisualStyleBackColor = true;
             this.lblChance.AutoSize = true;
-            this.lblChance.Location = new System.Drawing.Point(138, 478);
+            this.lblChance.Location = new System.Drawing.Point(208, 313);
             this.lblChance.Name = "lblChance";
             this.lblChance.Size = new System.Drawing.Size(13, 13);
             this.lblChance.TabIndex = 28;
@@ -765,7 +765,7 @@
             // lblCommon
             // 
             this.lblCommon.AutoSize = true;
-            this.lblCommon.Location = new System.Drawing.Point(138, 504);
+            this.lblCommon.Location = new System.Drawing.Point(208, 326);
             this.lblCommon.Name = "lblCommon";
             this.lblCommon.Size = new System.Drawing.Size(60, 13);
             this.lblCommon.TabIndex = 28;
@@ -774,7 +774,7 @@
             // lblRare
             // 
             this.lblRare.AutoSize = true;
-            this.lblRare.Location = new System.Drawing.Point(138, 517);
+            this.lblRare.Location = new System.Drawing.Point(208, 339);
             this.lblRare.Name = "lblRare";
             this.lblRare.Size = new System.Drawing.Size(42, 13);
             this.lblRare.TabIndex = 28;
@@ -783,7 +783,7 @@
             // lblUltra
             // 
             this.lblUltra.AutoSize = true;
-            this.lblUltra.Location = new System.Drawing.Point(138, 530);
+            this.lblUltra.Location = new System.Drawing.Point(208, 352);
             this.lblUltra.Name = "lblUltra";
             this.lblUltra.Size = new System.Drawing.Size(67, 13);
             this.lblUltra.TabIndex = 28;
@@ -792,7 +792,7 @@
             // lblLootBoxCookies
             // 
             this.lblLootBoxCookies.AutoSize = true;
-            this.lblLootBoxCookies.Location = new System.Drawing.Point(141, 558);
+            this.lblLootBoxCookies.Location = new System.Drawing.Point(210, 365);
             this.lblLootBoxCookies.Name = "lblLootBoxCookies";
             this.lblLootBoxCookies.Size = new System.Drawing.Size(57, 13);
             this.lblLootBoxCookies.TabIndex = 29;
@@ -845,8 +845,6 @@
             this.tabDebugAdd.PerformLayout();
             this.tabDebugInfo.ResumeLayout(false);
             this.tabDebugInfo.PerformLayout();
-            this.tabLootbox.ResumeLayout(false);
-            this.tabLootbox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
