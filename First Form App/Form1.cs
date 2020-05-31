@@ -32,8 +32,6 @@ namespace First_Form_App
         public int Money = 0, MoneyIncome = 0;
         public int secondtimer;
 
-
-
         private int timerinterval = 1000;
         private bool corgibool = true;
         private bool boolinterval = false;
@@ -49,7 +47,6 @@ namespace First_Form_App
             Score++;
             CookieUpdate();
             TimerStart();
-
         }
 
         //-----------FAMILY BUTTONS-----------//
