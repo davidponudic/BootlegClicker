@@ -55,15 +55,7 @@ namespace First_Form_App
         //Grandma button
         private void btnGrandma_Click(object sender, EventArgs e)
         {
-            if (cookies >= grandmavalue)
-            {
-                cookies -= grandmavalue;
-                grandmas++;
-                grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
-                CookieUpdate();
-                FamilyUpdate();
-            }
-            else MessageBox.Show("You don't have enough cookies!");
+            LevelLimits();
         }
 
         //---------TIMER--------//
@@ -127,6 +119,11 @@ namespace First_Form_App
         {
             grandmas += debuggrandmas;
             FamilyUpdate();
+        }
+
+        private void lblCookies_Click(object sender, EventArgs e)
+        {
+
         }
 
         //DEBUG Convert grandmas input to int
@@ -348,6 +345,201 @@ namespace First_Form_App
                     PesTable.Visible = true;
                     PesPlant.Visible = false;
                     corgibool = true;
+                }
+            }
+        }
+
+        //Level limits
+        private void LevelLimits()
+        {
+            if (level == 1)
+            {
+                if (grandmas < 5)
+                {
+                    if (cookies >= grandmavalue)
+                    {
+                        cookies -= grandmavalue;
+                        grandmas++;
+                        grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                        CookieUpdate();
+                        FamilyUpdate();
+                    }
+                    else MessageBox.Show("You don't have enough cookies!");
+                }
+                else
+                {
+                    MessageBox.Show("Level up for more upgrades!");
+                }
+            }
+            else if (level == 2)
+            {
+                if (grandmas < 10)
+                {
+                    if (cookies >= grandmavalue)
+                    {
+                        cookies -= grandmavalue;
+                        grandmas++;
+                        grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                        CookieUpdate();
+                        FamilyUpdate();
+                    }
+                    else MessageBox.Show("You don't have enough cookies!");
+                }
+                else
+                {
+                    MessageBox.Show("Level up for more upgrades!");
+                }
+            }
+            else if (level == 3)
+            {
+                if (grandmas < 15)
+                {
+                    if (cookies >= grandmavalue)
+                    {
+                        cookies -= grandmavalue;
+                        grandmas++;
+                        grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                        CookieUpdate();
+                        FamilyUpdate();
+                    }
+                    else MessageBox.Show("You don't have enough cookies!");
+                }
+                else
+                {
+                    MessageBox.Show("Level up for more upgrades!");
+                }
+            }
+            else if (level == 4)
+            {
+                if (grandmas < 20)
+                {
+                    if (cookies >= grandmavalue)
+                    {
+                        cookies -= grandmavalue;
+                        grandmas++;
+                        grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                        CookieUpdate();
+                        FamilyUpdate();
+                    }
+                    else MessageBox.Show("You don't have enough cookies!");
+                }
+                else
+                {
+                    MessageBox.Show("Level up for more upgrades!");
+                }
+            }
+            else if (level == 5)
+            {
+                if (grandmas < 25)
+                {
+                    if (cookies >= grandmavalue)
+                    {
+                        cookies -= grandmavalue;
+                        grandmas++;
+                        grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                        CookieUpdate();
+                        FamilyUpdate();
+                    }
+                    else MessageBox.Show("You don't have enough cookies!");
+                }
+                else
+                {
+                    MessageBox.Show("Level up for more upgrades!");
+                }
+            }
+            else if (level == 6)
+            {
+                if (grandmas < 30)
+                {
+                    if (cookies >= grandmavalue)
+                    {
+                        cookies -= grandmavalue;
+                        grandmas++;
+                        grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                        CookieUpdate();
+                        FamilyUpdate();
+                    }
+                    else MessageBox.Show("You don't have enough cookies!");
+                }
+                else
+                {
+                    MessageBox.Show("Level up for more upgrades!");
+                }
+            }
+            else if (level == 7)
+            {
+                if (grandmas < 35)
+                {
+                    if (cookies >= grandmavalue)
+                    {
+                        cookies -= grandmavalue;
+                        grandmas++;
+                        grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                        CookieUpdate();
+                        FamilyUpdate();
+                    }
+                    else MessageBox.Show("You don't have enough cookies!");
+                }
+                else
+                {
+                    MessageBox.Show("Level up for more upgrades!");
+                }
+            }
+            else if (level == 8)
+            {
+                if (grandmas < 40)
+                {
+                    if (cookies >= grandmavalue)
+                    {
+                        cookies -= grandmavalue;
+                        grandmas++;
+                        grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                        CookieUpdate();
+                        FamilyUpdate();
+                    }
+                    else MessageBox.Show("You don't have enough cookies!");
+                }
+                else
+                {
+                    MessageBox.Show("Level up for more upgrades!");
+                }
+            }
+            else if (level == 9)
+            {
+                if (grandmas < 45)
+                {
+                    if (cookies >= grandmavalue)
+                    {
+                        cookies -= grandmavalue;
+                        grandmas++;
+                        grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                        CookieUpdate();
+                        FamilyUpdate();
+                    }
+                    else MessageBox.Show("You don't have enough cookies!");
+                }
+                else
+                {
+                    MessageBox.Show("Level up for more upgrades!");
+                }
+            }
+            else if (level == 10)
+            {
+                if (grandmas < 50)
+                {
+                    if (cookies >= grandmavalue)
+                    {
+                        cookies -= grandmavalue;
+                        grandmas++;
+                        grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                        CookieUpdate();
+                        FamilyUpdate();
+                    }
+                    else MessageBox.Show("You don't have enough cookies!");
+                }
+                else
+                {
+                    MessageBox.Show("Level up for more upgrades!");
                 }
             }
         }
