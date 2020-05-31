@@ -6,23 +6,15 @@ using System.Threading.Tasks;
 
 namespace First_Form_App.Inventory
 {
-    class Item
+    public class Item
     {
         //deklaracija statu za iteme
-        string name;
-        string desc;
-        string stats;
-        string rarity;
+        public string Name;
+        public string Desc;
+        public string Stats;
+        public int Rarity;
 
-        Item(string x, string y, string z, string a)
-        {
-            name = x;
-            desc = y;
-            stats = z;
-            rarity = a;
-            
-        }
-
+      
 
     }
 }
