@@ -475,13 +475,18 @@ namespace First_Form_App
         //Father buy function
         private void FatherBuy()
         {
+            
             if (cookies >= fathervalue)
             {
-                cookies -= fathervalue;
-                fathers++;
-                fathervalue = Convert.ToInt32(fathervalue * (Math.Pow(multiplier, fathers)));
-                CookieUpdate();
-                FamilyUpdate();
+                if (fathers < fatherlimit)
+                {
+                    cookies -= fathervalue;
+                    fathers++;
+                    fathervalue = Convert.ToInt32(fathervalue * (Math.Pow(multiplier, fathers)));
+                    CookieUpdate();
+                    FamilyUpdate();
+                }
+                else MessageBox.Show("Level up to increase build limit!");
             }
             else MessageBox.Show("You don't have enough cookies!");
         }
@@ -544,6 +549,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 5;
                         grandpalimit = 5;
+                        fatherlimit = 1;
 
                         break;
                     }
@@ -551,6 +557,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 10;
                         grandpalimit = 10;
+                        fatherlimit = 2;
 
                         break;
                     }
@@ -558,6 +565,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 15;
                         grandpalimit = 15;
+                        fatherlimit = 3;
 
                         break;
                     }
@@ -565,6 +573,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 20;
                         grandpalimit = 20;
+                        fatherlimit = 4;
 
                         break;
                     }
@@ -572,6 +581,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 25;
                         grandpalimit = 25;
+                        fatherlimit = 5;
 
                         break;
                     }
@@ -579,6 +589,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 30;
                         grandpalimit = 30;
+                        fatherlimit = 6;
 
                         break;
                     }
@@ -586,6 +597,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 35;
                         grandpalimit = 35;
+                        fatherlimit = 7;
 
                         break;
                     }
@@ -593,6 +605,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 40;
                         grandpalimit = 40;
+                        fatherlimit = 8;
 
                         break;
                     }
@@ -600,6 +613,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 45;
                         grandpalimit = 45;
+                        fatherlimit = 9;
 
                         break;
                     }
@@ -607,6 +621,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 50;
                         grandpalimit = 50;
+                        fatherlimit = 10;
 
                         break;
                     }
