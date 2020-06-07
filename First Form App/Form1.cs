@@ -32,7 +32,6 @@ namespace First_Form_App
        
         public int Money = 0, MoneyIncome = 0;
         public int secondtimer;
-
         private int timerinterval = 1000;
         private bool corgibool = true;
         private bool boolinterval = false;
@@ -290,6 +289,7 @@ namespace First_Form_App
                 CookieUpdate();
                 barLove.Increment(1);
                 LoveUpdate();
+                
             }
         }
 
@@ -301,6 +301,7 @@ namespace First_Form_App
                 CookieUpdate();
                 barLove.Increment(10);
                 LoveUpdate();
+                
             }
         }
 
@@ -312,18 +313,21 @@ namespace First_Form_App
                 CookieUpdate();
                 barLove.Increment(100);
                 LoveUpdate();
+                
             }
         }
 
         //Updates love xp bar
         private void LoveUpdate()
+
         {
+            
             if (barLove.Value >= barLove.Maximum) {
                 LevelLimits();
                 switch (level)
                 {
                     case 1:
-
+                        barLove.Value = 0;
                         barLove.Maximum = 400;
                         level++;
                         MessageBox.Show("You leveled up!");
