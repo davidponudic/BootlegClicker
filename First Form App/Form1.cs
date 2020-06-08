@@ -28,7 +28,7 @@ namespace First_Form_App
         public int grandmavalue = 20, grandpavalue = 1000, mothervalue, fathervalue = 1000, brothervalue, sistervalue;
         public int level = 1;
         public int LootBoxCount = 0;
-        public int Ultra = 0, Rare = 0, Common = 0, LootBoxCookies = 0, LootBoxCookiesCost = 0;
+        public int Ultra = 0, Rare = 0, Common = 0, LootBoxMoney = 0, LootBoxMoneyCost = 0;
        
         public int Money = 0, MoneyIncome = 0;
         public int secondtimer;
@@ -83,7 +83,7 @@ namespace First_Form_App
 
             barLove.Value += grandpas;
 
-            lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxCookies) + " (" + Convert.ToString(LootBoxCookiesCost) + ")";
+            lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxMoney) + " (" + Convert.ToString(LootBoxMoneyCost) + ")";
 
             LoveUpdate();
             LootboxUpdate();
@@ -128,19 +128,19 @@ namespace First_Form_App
 
         private void btnBuyLootBox_Click(object sender, EventArgs e)
         {
-            if (cookies >= 50)
+            if (Money >= 50)
             {
                 LootBoxCount++;
-                cookies -= 50;
+                Money -= 50;
                 int Chance = rnd.Next(0, 100);
                 lblChance.Text = Convert.ToString(Chance);
-                LootBoxCookiesCost += 50;
+                LootBoxMoneyCost += 50;
 
                 if (Chance <= 50)
                 {
-                    LootBoxCookies += rnd.Next(30, 71);
+                    LootBoxMoney += rnd.Next(30, 71);
                     MessageBox.Show("OOF!");
-                    cookies += LootBoxCookies;
+                    cookies += LootBoxMoney;
 
                 }
                 else if (Chance <= 94 && Chance > 50)
@@ -158,6 +158,10 @@ namespace First_Form_App
                     MessageBox.Show("ULTRA RARE!");
                     Ultra++;
                 }
+            }
+            else
+            {
+                MessageBox.Show("You don't have enough money!");
             }
         }
         //items 
@@ -457,7 +461,7 @@ namespace First_Form_App
             lblRare.Text = "Rare: " + Convert.ToString(Rare);
             lblUltra.Text = "Ultra Rare: " + Convert.ToString(Ultra);
 
-            lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxCookies) + " (" + Convert.ToString(LootBoxCookiesCost) + ")";
+            lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxMoney) + " (" + Convert.ToString(LootBoxMoneyCost) + ")";
         }
 
         private void ScoreUpdate()
@@ -539,7 +543,7 @@ namespace First_Form_App
         {
             if (fathers != 0)
             {
-                if (secondtimer % 2 == 0)
+                if (secondtimer % 30 == 0)
                 {
                     Money += 100;
                 }
