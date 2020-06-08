@@ -323,7 +323,6 @@ namespace First_Form_App
         {
             
             if (barLove.Value >= barLove.Maximum) {
-                LevelLimits();
                 switch (level)
                 {
                     case 1:
@@ -331,6 +330,7 @@ namespace First_Form_App
                         barLove.Maximum = 880;
                         level++;
                         MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
 
                     case 2:
@@ -338,12 +338,14 @@ namespace First_Form_App
                         barLove.Maximum = 1440;
                         level++;
                         MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                     case 3:
                         barLove.Value = 0;
                         barLove.Maximum = 2080;
                         level++;
                         MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                     case 4:
 
@@ -351,42 +353,49 @@ namespace First_Form_App
                         barLove.Maximum = 2800;
                         level++;
                         MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                     case 5:
                         barLove.Value = 0;
                         barLove.Maximum = 3600;
                         level++;
                         MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                     case 6:
                         barLove.Value = 0;
                         barLove.Maximum = 4480;
                         level++;
                         MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                     case 7:
                         barLove.Value = 0;
                         barLove.Maximum = 5440;
                         level++;
                         MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                     case 8:
                         barLove.Value = 0;
                         barLove.Maximum = 6480;
                         level++;
                         MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                     case 9:
                         barLove.Value = 0;
                         barLove.Maximum = 7600;
                         level++;
                         MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                     case 10:
                         barLove.Value = 0;
                         barLove.Maximum = 8800;
                         level++;
                         MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                 }
 
