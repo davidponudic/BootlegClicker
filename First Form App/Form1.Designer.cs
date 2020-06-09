@@ -59,6 +59,7 @@
             this.btnMother = new System.Windows.Forms.Button();
             this.lblMothers = new System.Windows.Forms.Label();
             this.tabFather = new System.Windows.Forms.TabPage();
+            this.lblMoney2 = new System.Windows.Forms.Label();
             this.lblFatherCost = new System.Windows.Forms.Label();
             this.btnFather = new System.Windows.Forms.Button();
             this.lblFathers = new System.Windows.Forms.Label();
@@ -410,6 +411,7 @@
             // 
             // tabFather
             // 
+            this.tabFather.Controls.Add(this.lblMoney2);
             this.tabFather.Controls.Add(this.lblFatherCost);
             this.tabFather.Controls.Add(this.btnFather);
             this.tabFather.Controls.Add(this.lblFathers);
@@ -419,6 +421,17 @@
             this.tabFather.TabIndex = 3;
             this.tabFather.Text = "Father";
             this.tabFather.UseVisualStyleBackColor = true;
+            // 
+            // lblMoney2
+            // 
+            this.lblMoney2.AccessibleName = "lblMoney2";
+            this.lblMoney2.AutoSize = true;
+            this.lblMoney2.Location = new System.Drawing.Point(180, 189);
+            this.lblMoney2.Name = "lblMoney2";
+            this.lblMoney2.Size = new System.Drawing.Size(74, 13);
+            this.lblMoney2.TabIndex = 31;
+            this.lblMoney2.Text = "Money per 5s:";
+            this.lblMoney2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblFatherCost
             // 
@@ -604,6 +617,7 @@
             this.lblMoney.Size = new System.Drawing.Size(51, 13);
             this.lblMoney.TabIndex = 30;
             this.lblMoney.Text = "Money: 0";
+            this.lblMoney.Click += new System.EventHandler(this.lblMoney_Click);
             // 
             // tabControl2
             // 
@@ -892,6 +906,7 @@
             this.Controls.Add(this.btnCookies);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PesTable)).EndInit();
             this.tabControl1.ResumeLayout(false);
@@ -999,6 +1014,7 @@
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblMoney2;
     }
 }
 

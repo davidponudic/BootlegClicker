@@ -29,7 +29,9 @@ namespace First_Form_App
         public int level = 1;
         public int LootBoxCount = 0;
         public int Ultra = 0, Rare = 0, Common = 0, LootBoxMoney = 0, LootBoxMoneyCost = 0;
-       
+        public int MoneyP5S = 0;
+
+
         public int Money = 0, MoneyIncome = 0;
         public int secondtimer;
         private int timerinterval = 1000;
@@ -122,6 +124,21 @@ namespace First_Form_App
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void lblMoney_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
@@ -507,6 +524,9 @@ namespace First_Form_App
                     fathervalue = Convert.ToInt32(fathervalue * (Math.Pow(multiplier, fathers)));
                     CookieUpdate();
                     FamilyUpdate();
+                    MoneyP5S = Convert.ToInt32(95 * (Math.Pow(1.05, fathers)));
+
+                    lblMoney2.Text = "Money per 5s: " + MoneyP5S;
                 }
                 else MessageBox.Show("Level up to increase build limit!");
             }
@@ -550,7 +570,8 @@ namespace First_Form_App
             {
                 if (secondtimer % 5 == 0)
                 {
-                    Money += Convert.ToInt32(95 * (Math.Pow(1.05, fathers))); ;
+                    Money += Convert.ToInt32(95 * (Math.Pow(1.05, fathers)));
+                   
                 }
                 secondtimer++;
                 lblMoney.Text = "Money: " + Convert.ToString(Money);
