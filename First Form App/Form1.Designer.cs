@@ -103,6 +103,8 @@
             this.btnCookieDebug = new System.Windows.Forms.Button();
             this.tabDebugInfo = new System.Windows.Forms.TabPage();
             this.lblScore = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PesTable)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -118,6 +120,8 @@
             this.tabRecipeBook.SuspendLayout();
             this.tabDebugAdd.SuspendLayout();
             this.tabDebugInfo.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCookies
@@ -607,6 +611,7 @@
             this.tabControl2.Controls.Add(this.tabLootbox);
             this.tabControl2.Controls.Add(this.tabDebugAdd);
             this.tabControl2.Controls.Add(this.tabDebugInfo);
+            this.tabControl2.Controls.Add(this.tabPage1);
             this.tabControl2.Location = new System.Drawing.Point(468, 303);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
@@ -842,6 +847,25 @@
             this.lblScore.Size = new System.Drawing.Size(0, 13);
             this.lblScore.TabIndex = 18;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(312, 258);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Inventory";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(302, 251);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -891,6 +915,8 @@
             this.tabDebugAdd.PerformLayout();
             this.tabDebugInfo.ResumeLayout(false);
             this.tabDebugInfo.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -971,6 +997,8 @@
         private System.Windows.Forms.Button btnCookieDebug;
         private System.Windows.Forms.TabPage tabDebugInfo;
         private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
