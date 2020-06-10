@@ -123,11 +123,6 @@ namespace First_Form_App
             debugcookies = Convert.ToInt32(textboxCookieDebug.Text);
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnFather_Click(object sender, EventArgs e)
         {
             FatherBuy();
