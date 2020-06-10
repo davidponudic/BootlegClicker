@@ -38,7 +38,7 @@ namespace First_Form_App
         private bool corgibool = true;
         private bool boolinterval = false;
 
-        public string NASTJA = "LOVE I LOVE YOU";
+        
 
 
         Random rnd = new Random();
