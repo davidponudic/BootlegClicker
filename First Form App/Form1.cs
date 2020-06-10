@@ -545,7 +545,7 @@ namespace First_Form_App
             {
                 if (secondtimer % 5 == 0)
                 {
-                    Money += Convert.ToInt32(95 * (Math.Pow(1.05, fathers))); ;
+                    Money += Convert.ToInt32(95 * (Math.Pow(1.05, fathers)));
                 }
                 secondtimer++;
                 lblMoney.Text = "Money: " + Convert.ToString(Money);
