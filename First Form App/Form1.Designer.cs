@@ -431,7 +431,6 @@
             this.lblMoney2.Size = new System.Drawing.Size(74, 13);
             this.lblMoney2.TabIndex = 31;
             this.lblMoney2.Text = "Money per 5s:";
-            this.lblMoney2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblFatherCost
             // 
@@ -617,7 +616,6 @@
             this.lblMoney.Size = new System.Drawing.Size(51, 13);
             this.lblMoney.TabIndex = 30;
             this.lblMoney.Text = "Money: 0";
-            this.lblMoney.Click += new System.EventHandler(this.lblMoney_Click);
             // 
             // tabControl2
             // 
@@ -906,7 +904,6 @@
             this.Controls.Add(this.btnCookies);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PesTable)).EndInit();
             this.tabControl1.ResumeLayout(false);
