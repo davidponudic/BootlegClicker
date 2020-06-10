@@ -28,16 +28,18 @@ namespace First_Form_App
         public int grandmavalue = 20, grandpavalue = 1000, mothervalue, fathervalue = 1000, brothervalue, sistervalue;
         public int level = 1;
         public int LootBoxCount = 0;
-        public int Ultra = 0, Rare = 0, Common = 0, LootBoxCookies = 0, LootBoxCookiesCost = 0;
-       
+        public int Ultra = 0, Rare = 0, Common = 0, LootBoxMoney = 0, LootBoxMoneyCost = 0;
+        public int MoneyP5S = 0;
+
+
         public int Money = 0, MoneyIncome = 0;
         public int secondtimer;
-
-
-
         private int timerinterval = 1000;
         private bool corgibool = true;
         private bool boolinterval = false;
+
+        public string NASTJA = "LOVE I LOVE YOU";
+
 
         Random rnd = new Random();
 
@@ -50,7 +52,6 @@ namespace First_Form_App
             Score++;
             CookieUpdate();
             TimerStart();
-
         }
 
         //-----------FAMILY BUTTONS-----------//
@@ -75,7 +76,6 @@ namespace First_Form_App
         private void CookieTimer_Tick(object sender, EventArgs e)
         {
             CookieTimer.Interval = timerinterval;
-            secondtimer++;
             
             cookiesprev = cookies;
 
@@ -85,9 +85,7 @@ namespace First_Form_App
 
             barLove.Value += grandpas;
 
-            lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxCookies) + " (" + Convert.ToString(LootBoxCookiesCost) + ")";
-
-            lblMoney.Text = "Money: " + Convert.ToString(Money);
+            lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxMoney) + " (" + Convert.ToString(LootBoxMoneyCost) + ")";
 
             LoveUpdate();
             LootboxUpdate();
@@ -132,19 +130,19 @@ namespace First_Form_App
 
         private void btnBuyLootBox_Click(object sender, EventArgs e)
         {
-            if (cookies >= 50)
+            if (Money >= 50)
             {
                 LootBoxCount++;
-                cookies -= 50;
+                Money -= 50;
                 int Chance = rnd.Next(0, 100);
                 lblChance.Text = Convert.ToString(Chance);
-                LootBoxCookiesCost += 50;
+                LootBoxMoneyCost += 50;
 
                 if (Chance <= 50)
                 {
-                    LootBoxCookies += rnd.Next(30, 71);
+                    LootBoxMoney += rnd.Next(30, 71);
                     MessageBox.Show("OOF!");
-                    cookies += LootBoxCookies;
+                    cookies += LootBoxMoney;
 
                 }
                 else if (Chance <= 94 && Chance > 50)
@@ -162,6 +160,10 @@ namespace First_Form_App
                     MessageBox.Show("ULTRA RARE!");
                     Ultra++;
                 }
+            }
+            else
+            {
+                MessageBox.Show("You don't have enough money!");
             }
         }
         //items 
@@ -197,7 +199,7 @@ namespace First_Form_App
 
             Item Macarons = new Item();
             Macarons.Name = "Macarons";
-            Macarons.Desc = "It's like spraying perfume into your mouth! *inser lemmy face*";
+            Macarons.Desc = "It's like spraying perfume into your mouth! *insert lenny face*";
             Macarons.Stats = "Can be traded for 1 lvl";
             Macarons.Rarity = 2;
 
@@ -207,25 +209,6 @@ namespace First_Form_App
             Double_chip_cookies.Stats = "!!!Double everything!!!";
             Double_chip_cookies.Rarity = 3;
             
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         //DEBUG Add grandmas
@@ -312,6 +295,7 @@ namespace First_Form_App
                 CookieUpdate();
                 barLove.Increment(1);
                 LoveUpdate();
+                
             }
         }
 
@@ -323,6 +307,7 @@ namespace First_Form_App
                 CookieUpdate();
                 barLove.Increment(10);
                 LoveUpdate();
+                
             }
         }
 
@@ -334,59 +319,89 @@ namespace First_Form_App
                 CookieUpdate();
                 barLove.Increment(100);
                 LoveUpdate();
+                
             }
         }
 
         //Updates love xp bar
         private void LoveUpdate()
+
         {
+            
             if (barLove.Value >= barLove.Maximum) {
-                level++;
-                LevelLimits();
-                MessageBox.Show("You leveled up!");
                 switch (level)
                 {
                     case 1:
-
-                        barLove.Maximum = 400;
+                        barLove.Value = 0;
+                        barLove.Maximum = 880;
+                        level++;
+                        MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
 
                     case 2:
                         barLove.Value = 0;
-                        barLove.Maximum = 880;
+                        barLove.Maximum = 1440;
+                        level++;
+                        MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                     case 3:
                         barLove.Value = 0;
-                        barLove.Maximum = 1440;
+                        barLove.Maximum = 2080;
+                        level++;
+                        MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                     case 4:
 
                         barLove.Value = 0;
-                        barLove.Maximum = 2080;
+                        barLove.Maximum = 2800;
+                        level++;
+                        MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                     case 5:
                         barLove.Value = 0;
-                        barLove.Maximum = 2800;
+                        barLove.Maximum = 3600;
+                        level++;
+                        MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                     case 6:
                         barLove.Value = 0;
-                        barLove.Maximum = 3600;
+                        barLove.Maximum = 4480;
+                        level++;
+                        MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                     case 7:
                         barLove.Value = 0;
-                        barLove.Maximum = 4480;
+                        barLove.Maximum = 5440;
+                        level++;
+                        MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                     case 8:
                         barLove.Value = 0;
-                        barLove.Maximum = 5440;
+                        barLove.Maximum = 6480;
+                        level++;
+                        MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                     case 9:
                         barLove.Value = 0;
-                        barLove.Maximum = 6480;
+                        barLove.Maximum = 7600;
+                        level++;
+                        MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                     case 10:
                         barLove.Value = 0;
-                        barLove.Maximum = 7600;
+                        barLove.Maximum = 8800;
+                        level++;
+                        MessageBox.Show("You leveled up!");
+                        LevelLimits();
                         break;
                 }
 
@@ -448,7 +463,7 @@ namespace First_Form_App
             lblRare.Text = "Rare: " + Convert.ToString(Rare);
             lblUltra.Text = "Ultra Rare: " + Convert.ToString(Ultra);
 
-            lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxCookies) + " (" + Convert.ToString(LootBoxCookiesCost) + ")";
+            lblLootBoxCookies.Text = "Cookies: " + Convert.ToString(LootBoxMoney) + " (" + Convert.ToString(LootBoxMoneyCost) + ")";
         }
 
         private void ScoreUpdate()
@@ -479,13 +494,21 @@ namespace First_Form_App
         //Father buy function
         private void FatherBuy()
         {
+            
             if (cookies >= fathervalue)
             {
-                cookies -= fathervalue;
-                fathers++;
-                fathervalue = Convert.ToInt32(fathervalue * (Math.Pow(multiplier, fathers)));
-                CookieUpdate();
-                FamilyUpdate();
+                if (fathers < fatherlimit)
+                {
+                    cookies -= fathervalue;
+                    fathers++;
+                    fathervalue = Convert.ToInt32(fathervalue * (Math.Pow(multiplier, fathers)));
+                    CookieUpdate();
+                    FamilyUpdate();
+                    MoneyP5S = Convert.ToInt32(95 * (Math.Pow(1.05, fathers)));
+
+                    lblMoney2.Text = "Money per 5s: " + MoneyP5S;
+                }
+                else MessageBox.Show("Level up to increase build limit!");
             }
             else MessageBox.Show("You don't have enough cookies!");
         }
@@ -523,10 +546,21 @@ namespace First_Form_App
         }
         private void FatherIncome()
         {
-            if (secondtimer % 2 == 0)
+            if (fathers != 0)
             {
-                Money += 100;
+                if (secondtimer % 5 == 0)
+                {
+                    Money += Convert.ToInt32(95 * (Math.Pow(1.05, fathers)));
+                   
+                }
+                secondtimer++;
+                lblMoney.Text = "Money: " + Convert.ToString(Money);
             }
+            else
+            {
+                lblMoney.Text = "Money: 0";
+            }
+            
         }
 
         //Level limits
@@ -538,6 +572,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 5;
                         grandpalimit = 5;
+                        fatherlimit = 1;
 
                         break;
                     }
@@ -545,6 +580,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 10;
                         grandpalimit = 10;
+                        fatherlimit = 2;
 
                         break;
                     }
@@ -552,6 +588,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 15;
                         grandpalimit = 15;
+                        fatherlimit = 3;
 
                         break;
                     }
@@ -559,6 +596,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 20;
                         grandpalimit = 20;
+                        fatherlimit = 4;
 
                         break;
                     }
@@ -566,6 +604,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 25;
                         grandpalimit = 25;
+                        fatherlimit = 5;
 
                         break;
                     }
@@ -573,6 +612,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 30;
                         grandpalimit = 30;
+                        fatherlimit = 6;
 
                         break;
                     }
@@ -580,6 +620,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 35;
                         grandpalimit = 35;
+                        fatherlimit = 7;
 
                         break;
                     }
@@ -587,6 +628,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 40;
                         grandpalimit = 40;
+                        fatherlimit = 8;
 
                         break;
                     }
@@ -594,6 +636,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 45;
                         grandpalimit = 45;
+                        fatherlimit = 9;
 
                         break;
                     }
@@ -601,6 +644,7 @@ namespace First_Form_App
                     {
                         grandmalimit = 50;
                         grandpalimit = 50;
+                        fatherlimit = 10;
 
                         break;
                     }

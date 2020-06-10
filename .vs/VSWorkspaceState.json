@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\First Form App"
   ],
-  "SelectedNode": "\\First Form App.sln",
+  "SelectedNode": "\\First Form App\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
