@@ -170,7 +170,7 @@ namespace First_Form_App
        
 
         private void Items()
-        {
+        { /*
             Item Plain_cookies = new Item();
             Plain_cookies.Name = "Plain cookies";
             Plain_cookies.Desc = "It's not much, but it's something";
@@ -208,6 +208,8 @@ namespace First_Form_App
             Double_chip_cookies.Desc = "DOUBLE THE CHIPS DOUBLE THE TASTY(double the calories)";
             Double_chip_cookies.Stats = "!!!Double everything!!!";
             Double_chip_cookies.Rarity = 3;
+            */
+            
             
         }
 
