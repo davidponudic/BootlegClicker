@@ -70,6 +70,26 @@ namespace First_Form_App
             GrandpaBuy();
         }
 
+        private void btnFather_Click(object sender, EventArgs e)
+        {
+            FatherBuy();
+        }
+
+        private void btnMother_Click(object sender, EventArgs e)
+        {
+            MotherBuy();
+        }
+
+        private void btnBrother_Click(object sender, EventArgs e)
+        {
+            BrotherBuy();
+        }
+
+        private void btnSister_Click(object sender, EventArgs e)
+        {
+            SisterBuy();
+        }
+
         //---------TIMER--------//
 
         //Main timer
@@ -123,31 +143,6 @@ namespace First_Form_App
             debugcookies = Convert.ToInt32(textboxCookieDebug.Text);
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void lblMoney_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnFather_Click(object sender, EventArgs e)
-        {
-            FatherBuy();
-        }
-
         private void btnBuyLootBox_Click(object sender, EventArgs e)
         {
             if (Money >= 50)
@@ -196,8 +191,6 @@ namespace First_Form_App
             Plain_cookies.Desc = "It's not much, but it's something";
             Plain_cookies.Stats = "Gives you +1 cookie on button press";
             Plain_cookies.Rarity = 1;
-
-
 
             Item Chocolate_chip_cookie = new Item();
             Chocolate_chip_cookie.Name = "Chocolate chip cookie";
@@ -510,11 +503,43 @@ namespace First_Form_App
                 }
             }
         }
+        
+        //Grandma buy function
+        private void GrandmaBuy()
+        {
+            if (cookies >= grandmavalue)
+                if (grandmas < grandmalimit)
+                {
+                    cookies -= grandmavalue;
+                    grandmas++;
+                    grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                    CookieUpdate();
+                    FamilyUpdate();
+                }
+                else MessageBox.Show("Level up to increase build limit!");
+            else MessageBox.Show("You don't have enough cookies!");
+        }
+
+        //Grandpa buy function
+        private void GrandpaBuy()
+        {
+            if (cookies >= grandpavalue)
+                if (grandpas < grandpalimit)
+                {
+                    cookies -= grandpavalue;
+                    grandpas++;
+                    grandpavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                    CookieUpdate();
+                    FamilyUpdate();
+                }
+                else MessageBox.Show("Level up to increase build limit!");
+            else MessageBox.Show("You don't have enough cookies!");
+        }
 
         //Father buy function
         private void FatherBuy()
         {
-            
+
             if (cookies >= fathervalue)
             {
                 if (fathers < fatherlimit)
@@ -533,16 +558,15 @@ namespace First_Form_App
             else MessageBox.Show("You don't have enough cookies!");
         }
 
-        
-        //Grandma buy function
-        private void GrandmaBuy()
+        //Mother buy function
+        private void MotherBuy()
         {
-            if (cookies >= grandmavalue)
-                if (grandmas < grandmalimit)
+            if (cookies >= mothervalue)
+                if (mothers < motherlimit)
                 {
-                    cookies -= grandmavalue;
-                    grandmas++;
-                    grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                    cookies -= mothervalue;
+                    mothers++;
+                    mothervalue = Convert.ToInt32(mothervalue * (Math.Pow(multiplier, mothers)));
                     CookieUpdate();
                     FamilyUpdate();
                 }
@@ -550,20 +574,39 @@ namespace First_Form_App
             else MessageBox.Show("You don't have enough cookies!");
         }
 
-        private void GrandpaBuy()
+        //Brother buy function
+        private void BrotherBuy()
         {
-            if (cookies >= grandpavalue)
-                if (grandpas < grandpalimit)
+            if (cookies >= brothervalue)
+                if (brothers < brotherlimit)
                 {
-                    cookies -= grandpavalue;
-                    grandpas++;
-                    grandpavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
+                    cookies -= brothervalue;
+                    brothers++;
+                    brothervalue = Convert.ToInt32(brothervalue * (Math.Pow(multiplier, brothers)));
                     CookieUpdate();
                     FamilyUpdate();
                 }
                 else MessageBox.Show("Level up to increase build limit!");
             else MessageBox.Show("You don't have enough cookies!");
         }
+
+        //Sister buy function
+        private void SisterBuy()
+        {
+            if (cookies >= sistervalue)
+                if (sisters < sisterlimit)
+                {
+                    cookies -= sistervalue;
+                    sisters++;
+                    sistervalue = Convert.ToInt32(sistervalue * (Math.Pow(multiplier, sisters)));
+                    CookieUpdate();
+                    FamilyUpdate();
+                }
+                else MessageBox.Show("Level up to increase build limit!");
+            else MessageBox.Show("You don't have enough cookies!");
+        }
+
+        //Allowance addition
         private void FatherIncome()
         {
             if (fathers != 0)
