@@ -347,6 +347,16 @@
             this.btnGrandpa.UseVisualStyleBackColor = true;
             this.btnGrandpa.Click += new System.EventHandler(this.btnGrandpa_Click);
             // 
+            // btnFather
+            // 
+            this.btnFather.Location = new System.Drawing.Point(183, 230);
+            this.btnFather.Name = "btnFather";
+            this.btnFather.Size = new System.Drawing.Size(123, 23);
+            this.btnFather.TabIndex = 1;
+            this.btnFather.Text = "Call father";
+            this.btnFather.UseVisualStyleBackColor = true;
+            this.btnFather.Click += new System.EventHandler(this.btnFather_Click);
+            // 
             // lblGrandpaCost
             // 
             this.lblGrandpaCost.AutoSize = true;
@@ -457,16 +467,6 @@
             this.lblFatherCost.Size = new System.Drawing.Size(34, 13);
             this.lblFatherCost.TabIndex = 2;
             this.lblFatherCost.Text = "Cost: ";
-            // 
-            // btnFather
-            // 
-            this.btnFather.Location = new System.Drawing.Point(183, 230);
-            this.btnFather.Name = "btnFather";
-            this.btnFather.Size = new System.Drawing.Size(123, 23);
-            this.btnFather.TabIndex = 1;
-            this.btnFather.Text = "Call father";
-            this.btnFather.UseVisualStyleBackColor = true;
-            this.btnFather.Click += new System.EventHandler(this.btnFather_Click);
             // 
             // lblFathers
             // 
