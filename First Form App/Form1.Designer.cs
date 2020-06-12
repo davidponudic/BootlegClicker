@@ -105,7 +105,7 @@
             this.tabDebugInfo = new System.Windows.Forms.TabPage();
             this.lblScore = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pnlInv = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PesTable)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -122,7 +122,6 @@
             this.tabDebugAdd.SuspendLayout();
             this.tabDebugInfo.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCookies
@@ -431,7 +430,6 @@
             this.lblMoney2.Size = new System.Drawing.Size(74, 13);
             this.lblMoney2.TabIndex = 31;
             this.lblMoney2.Text = "Money per 5s:";
-            this.lblMoney2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblFatherCost
             // 
@@ -617,7 +615,6 @@
             this.lblMoney.Size = new System.Drawing.Size(51, 13);
             this.lblMoney.TabIndex = 30;
             this.lblMoney.Text = "Money: 0";
-            this.lblMoney.Click += new System.EventHandler(this.lblMoney_Click);
             // 
             // tabControl2
             // 
@@ -863,7 +860,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.pnlInv);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Size = new System.Drawing.Size(312, 258);
@@ -871,14 +868,12 @@
             this.tabPage1.Text = "Inventory";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // pnlInv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(302, 251);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.pnlInv.Location = new System.Drawing.Point(4, 5);
+            this.pnlInv.Name = "pnlInv";
+            this.pnlInv.Size = new System.Drawing.Size(307, 252);
+            this.pnlInv.TabIndex = 0;
             // 
             // Form1
             // 
@@ -931,7 +926,6 @@
             this.tabDebugInfo.ResumeLayout(false);
             this.tabDebugInfo.PerformLayout();
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1013,8 +1007,8 @@
         private System.Windows.Forms.TabPage tabDebugInfo;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblMoney2;
+        private System.Windows.Forms.Panel pnlInv;
     }
 }
 
