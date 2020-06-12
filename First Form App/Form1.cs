@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using First_Form_App.Family;
 using First_Form_App.Inventory;
 
+
+
+
+
 namespace First_Form_App
 {
     public partial class Form1 : Form
@@ -18,6 +22,26 @@ namespace First_Form_App
         {
             InitializeComponent();
         }
+        SolidBrush black = new SolidBrush(Color.Black);
+        SolidBrush gray = new SolidBrush(Color.Gray);
+        Pen redPen = new Pen(Color.Red, 4);
+        static int xNumberOfBagSlots = 6;
+        static int yNumberOfBagSlots = 6;
+        static int totalBagSlots = xNumberOfBagSlots * yNumberOfBagSlots;
+        Bag[,] bagSlot = new Bag[xNumberOfBagSlots, yNumberOfBagSlots];
+        Bag inPlayerHand = new Bag(-1, -1, -1, -1);
+        Graphics g;
+        //Point mouseLocation;
+       // bool ItemInHand = false;
+
+        Bitmap Plain_cookies = new Bitmap(Properties.Resources._1);
+        Bitmap Macarons = new Bitmap(Properties.Resources._2);
+        Bitmap White_chocolate_cookies = new Bitmap(Properties.Resources._3);
+        Bitmap Yogurt_cookies = new Bitmap(Properties.Resources._4);
+        Bitmap Double_chip_cookies = new Bitmap(Properties.Resources._5);
+        Bitmap Chocolate_chip_cookie = new Bitmap(Properties.Resources._6);
+
+
 
         public int cookies, cookiesprev, Score;
         public int debugcookies, debuggrandmas, debuggrandpas, debugmothers, debugfathers, debugbrothers, debugsisters;
@@ -30,7 +54,7 @@ namespace First_Form_App
         public int LootBoxCount = 0;
         public int Ultra = 0, Rare = 0, Common = 0, LootBoxMoney = 0, LootBoxMoneyCost = 0;
         public int MoneyP5S = 0;
-
+        
 
         public int Money = 0, MoneyIncome = 0;
         public int secondtimer;
@@ -38,7 +62,7 @@ namespace First_Form_App
         private bool corgibool = true;
         private bool boolinterval = false;
 
-        
+        public string NASTJA = "LOVE I LOVE YOU";
 
 
         Random rnd = new Random();
@@ -70,26 +94,6 @@ namespace First_Form_App
             GrandpaBuy();
         }
 
-        private void btnFather_Click(object sender, EventArgs e)
-        {
-            FatherBuy();
-        }
-
-        private void btnMother_Click(object sender, EventArgs e)
-        {
-            MotherBuy();
-        }
-
-        private void btnBrother_Click(object sender, EventArgs e)
-        {
-            BrotherBuy();
-        }
-
-        private void btnSister_Click(object sender, EventArgs e)
-        {
-            SisterBuy();
-        }
-
         //---------TIMER--------//
 
         //Main timer
@@ -114,6 +118,7 @@ namespace First_Form_App
             ScoreUpdate();
             PictureChange();
             FatherIncome();
+            drawCompleteInvintory();
 
         }
 
@@ -143,6 +148,80 @@ namespace First_Form_App
             debugcookies = Convert.ToInt32(textboxCookieDebug.Text);
         }
 
+      
+
+        
+
+      
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            g = pnlInv.CreateGraphics();
+            createBagSlots();
+           // createItems();
+
+        }
+
+        private void createBagSlots()
+        {
+            for (int x = 0; x < xNumberOfBagSlots; x++)
+            {
+                for (int y = 0; y < yNumberOfBagSlots; y++)
+                {
+                    bagSlot[x, y] = new Bag(x, y, x * 50, y * 50);
+                }
+            }
+        }
+        /*private void createItems()
+        {
+            item.Add(new Item(Plain_cookies, "Plain cookies", 1));
+            item.Add(new Item(Macarons, "Macarons", 2));
+            item.Add(new Item(White_chocolate_cookies, "White chocolate cookies", 3));
+            item.Add(new Item(Yogurt_cookies, "Yogurt cookies", 4));
+            item.Add(new Item(Double_chip_cookies, "Double chip cookies", 5));
+            item.Add(new Item(Chocolate_chip_cookie, "Chocolate chip cookie", 6));
+           
+        }*/
+
+        private void drawBagSpacing()
+        {
+            g.FillRectangle(gray, 0, 0, 300, 300);
+
+            g.FillRectangle(black, 0, 0, 300, 5);
+            g.FillRectangle(black, 0, 50, 300, 5);
+            g.FillRectangle(black, 0, 100, 300, 5);
+            g.FillRectangle(black, 0, 150, 300, 5);
+            g.FillRectangle(black, 0, 200, 300, 5);
+            g.FillRectangle(black, 0, 250, 300, 5);
+            g.FillRectangle(black, 0, 300, 300, 5);
+
+            g.FillRectangle(black, 0, 0, 5, 300);
+            g.FillRectangle(black, 50, 0, 5, 300);
+            g.FillRectangle(black, 100, 0, 5, 300);
+            g.FillRectangle(black, 150, 0, 5, 300);
+            g.FillRectangle(black, 200, 0, 5, 300);
+            g.FillRectangle(black, 250, 0, 5, 300);
+            g.FillRectangle(black, 300, 0, 5, 305);
+
+        }
+        private void drawItemInBag(int x, int y, Item item)
+        {
+            if (item != null)
+            {
+                g.DrawImage(item.picture, x + 5, y + 5, 45, 45);
+            }
+        }
+        private void drawCompleteInvintory()
+        {
+            drawBagSpacing();
+            for (int x = 0; x < xNumberOfBagSlots; x++)
+            {
+                for (int y = 0; y < yNumberOfBagSlots; y++)
+                {
+                   // drawItemInBag(bagSlot[x, y].xGraphicLocation, bagSlot[x, y].yGraphicLocation,  //bagSlot[x, y].item);
+                }
+            }
+        }
         private void btnFather_Click(object sender, EventArgs e)
         {
             FatherBuy();
@@ -190,44 +269,44 @@ namespace First_Form_App
        
 
         private void Items()
-        { /*
-            Item Plain_cookies = new Item();
+        {
+            Item1 Plain_cookies = new Item1();
             Plain_cookies.Name = "Plain cookies";
             Plain_cookies.Desc = "It's not much, but it's something";
             Plain_cookies.Stats = "Gives you +1 cookie on button press";
             Plain_cookies.Rarity = 1;
 
-            Item Chocolate_chip_cookie = new Item();
+
+
+            Item1 Chocolate_chip_cookie = new Item1();
             Chocolate_chip_cookie.Name = "Chocolate chip cookie";
             Chocolate_chip_cookie.Desc = "This is the cookie your grandma has been baking this all time.";
             Chocolate_chip_cookie.Stats = "Gives your granma cookie production multiplier +10%";
             Chocolate_chip_cookie.Rarity = 1;
 
-            Item White_chocolate_cookies = new Item();
+            Item1 White_chocolate_cookies = new Item1();
             White_chocolate_cookies.Name = "White chocolate cookies";
             White_chocolate_cookies.Desc = "I know what you'll say. It's just cocoa butter! It's not real chocolate!Oh please";
             White_chocolate_cookies.Stats = "Gives your granpa exp production multiplier +10%";
             White_chocolate_cookies.Rarity = 1;
 
-            Item Yogurt_cookies = new Item();
+            Item1 Yogurt_cookies = new Item1();
             Yogurt_cookies.Name = "Yogurt cookies";
             Yogurt_cookies.Desc = "These cookies have seen things.";
             Yogurt_cookies.Stats = "Gives you lvl up on grandma every 10 s";
             Yogurt_cookies.Rarity = 2;
 
-            Item Macarons = new Item();
+            Item1 Macarons = new Item1();
             Macarons.Name = "Macarons";
             Macarons.Desc = "It's like spraying perfume into your mouth! *insert lenny face*";
             Macarons.Stats = "Can be traded for 1 lvl";
             Macarons.Rarity = 2;
 
-            Item Double_chip_cookies = new Item();
+            Item1 Double_chip_cookies = new Item1();
             Double_chip_cookies.Name = "Double - chip cookies";
             Double_chip_cookies.Desc = "DOUBLE THE CHIPS DOUBLE THE TASTY(double the calories)";
             Double_chip_cookies.Stats = "!!!Double everything!!!";
             Double_chip_cookies.Rarity = 3;
-            */
-            
             
         }
 
@@ -510,43 +589,11 @@ namespace First_Form_App
                 }
             }
         }
-        
-        //Grandma buy function
-        private void GrandmaBuy()
-        {
-            if (cookies >= grandmavalue)
-                if (grandmas < grandmalimit)
-                {
-                    cookies -= grandmavalue;
-                    grandmas++;
-                    grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
-                    CookieUpdate();
-                    FamilyUpdate();
-                }
-                else MessageBox.Show("Level up to increase build limit!");
-            else MessageBox.Show("You don't have enough cookies!");
-        }
-
-        //Grandpa buy function
-        private void GrandpaBuy()
-        {
-            if (cookies >= grandpavalue)
-                if (grandpas < grandpalimit)
-                {
-                    cookies -= grandpavalue;
-                    grandpas++;
-                    grandpavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
-                    CookieUpdate();
-                    FamilyUpdate();
-                }
-                else MessageBox.Show("Level up to increase build limit!");
-            else MessageBox.Show("You don't have enough cookies!");
-        }
 
         //Father buy function
         private void FatherBuy()
         {
-
+            
             if (cookies >= fathervalue)
             {
                 if (fathers < fatherlimit)
@@ -565,15 +612,16 @@ namespace First_Form_App
             else MessageBox.Show("You don't have enough cookies!");
         }
 
-        //Mother buy function
-        private void MotherBuy()
+        
+        //Grandma buy function
+        private void GrandmaBuy()
         {
-            if (cookies >= mothervalue)
-                if (mothers < motherlimit)
+            if (cookies >= grandmavalue)
+                if (grandmas < grandmalimit)
                 {
-                    cookies -= mothervalue;
-                    mothers++;
-                    mothervalue = Convert.ToInt32(mothervalue * (Math.Pow(multiplier, mothers)));
+                    cookies -= grandmavalue;
+                    grandmas++;
+                    grandmavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
                     CookieUpdate();
                     FamilyUpdate();
                 }
@@ -581,39 +629,20 @@ namespace First_Form_App
             else MessageBox.Show("You don't have enough cookies!");
         }
 
-        //Brother buy function
-        private void BrotherBuy()
+        private void GrandpaBuy()
         {
-            if (cookies >= brothervalue)
-                if (brothers < brotherlimit)
+            if (cookies >= grandpavalue)
+                if (grandpas < grandpalimit)
                 {
-                    cookies -= brothervalue;
-                    brothers++;
-                    brothervalue = Convert.ToInt32(brothervalue * (Math.Pow(multiplier, brothers)));
+                    cookies -= grandpavalue;
+                    grandpas++;
+                    grandpavalue = Convert.ToInt32(grandmavalue * (Math.Pow(multiplier, grandmas)));
                     CookieUpdate();
                     FamilyUpdate();
                 }
                 else MessageBox.Show("Level up to increase build limit!");
             else MessageBox.Show("You don't have enough cookies!");
         }
-
-        //Sister buy function
-        private void SisterBuy()
-        {
-            if (cookies >= sistervalue)
-                if (sisters < sisterlimit)
-                {
-                    cookies -= sistervalue;
-                    sisters++;
-                    sistervalue = Convert.ToInt32(sistervalue * (Math.Pow(multiplier, sisters)));
-                    CookieUpdate();
-                    FamilyUpdate();
-                }
-                else MessageBox.Show("Level up to increase build limit!");
-            else MessageBox.Show("You don't have enough cookies!");
-        }
-
-        //Allowance addition
         private void FatherIncome()
         {
             if (fathers != 0)
