@@ -45,7 +45,6 @@
             this.btnXP_100 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabGrandma = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblGrandmaCPS = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabGrandpa = new System.Windows.Forms.TabPage();
@@ -60,6 +59,7 @@
             this.btnMother = new System.Windows.Forms.Button();
             this.lblMothers = new System.Windows.Forms.Label();
             this.tabFather = new System.Windows.Forms.TabPage();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblMoney2 = new System.Windows.Forms.Label();
             this.lblFatherCost = new System.Windows.Forms.Label();
             this.btnFather = new System.Windows.Forms.Button();
@@ -107,7 +107,8 @@
             this.lblScore = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PesTable)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -118,15 +119,18 @@
             this.tabMother.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabFather.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.lblBrother.SuspendLayout();
             this.lblSister.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabRecipeBook.SuspendLayout();
+            this.tabLootbox.SuspendLayout();
             this.tabDebugAdd.SuspendLayout();
             this.tabDebugInfo.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCookies
@@ -270,7 +274,6 @@
             // 
             // tabGrandma
             // 
-            this.tabGrandma.Controls.Add(this.label1);
             this.tabGrandma.Controls.Add(this.lblGrandmaCPS);
             this.tabGrandma.Controls.Add(this.pictureBox1);
             this.tabGrandma.Controls.Add(this.lblGrandmas);
@@ -283,15 +286,6 @@
             this.tabGrandma.TabIndex = 0;
             this.tabGrandma.Text = "Grandma";
             this.tabGrandma.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "label1";
             // 
             // lblGrandmaCPS
             // 
@@ -346,16 +340,6 @@
             this.btnGrandpa.Text = "Call grandpa";
             this.btnGrandpa.UseVisualStyleBackColor = true;
             this.btnGrandpa.Click += new System.EventHandler(this.btnGrandpa_Click);
-            // 
-            // btnFather
-            // 
-            this.btnFather.Location = new System.Drawing.Point(183, 230);
-            this.btnFather.Name = "btnFather";
-            this.btnFather.Size = new System.Drawing.Size(123, 23);
-            this.btnFather.TabIndex = 1;
-            this.btnFather.Text = "Call father";
-            this.btnFather.UseVisualStyleBackColor = true;
-            this.btnFather.Click += new System.EventHandler(this.btnFather_Click);
             // 
             // lblGrandpaCost
             // 
@@ -449,6 +433,16 @@
             this.tabFather.Text = "Father";
             this.tabFather.UseVisualStyleBackColor = true;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(3, 14);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(173, 271);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 32;
+            this.pictureBox4.TabStop = false;
+            // 
             // lblMoney2
             // 
             this.lblMoney2.AccessibleName = "lblMoney2";
@@ -468,6 +462,16 @@
             this.lblFatherCost.TabIndex = 2;
             this.lblFatherCost.Text = "Cost: ";
             // 
+            // btnFather
+            // 
+            this.btnFather.Location = new System.Drawing.Point(183, 230);
+            this.btnFather.Name = "btnFather";
+            this.btnFather.Size = new System.Drawing.Size(123, 23);
+            this.btnFather.TabIndex = 1;
+            this.btnFather.Text = "Call father";
+            this.btnFather.UseVisualStyleBackColor = true;
+            this.btnFather.Click += new System.EventHandler(this.btnFather_Click);
+            // 
             // lblFathers
             // 
             this.lblFathers.AutoSize = true;
@@ -479,6 +483,7 @@
             // 
             // lblBrother
             // 
+            this.lblBrother.Controls.Add(this.pictureBox5);
             this.lblBrother.Controls.Add(this.lblBrotherCost);
             this.lblBrother.Controls.Add(this.btnBrother);
             this.lblBrother.Controls.Add(this.lblBrothers);
@@ -519,6 +524,7 @@
             // 
             // lblSister
             // 
+            this.lblSister.Controls.Add(this.pictureBox6);
             this.lblSister.Controls.Add(this.lblSisterCost);
             this.lblSister.Controls.Add(this.btnSister);
             this.lblSister.Controls.Add(this.lblSisters);
@@ -576,7 +582,7 @@
             // lblLootBoxCount
             // 
             this.lblLootBoxCount.AutoSize = true;
-            this.lblLootBoxCount.Location = new System.Drawing.Point(13, 10);
+            this.lblLootBoxCount.Location = new System.Drawing.Point(12, 235);
             this.lblLootBoxCount.Name = "lblLootBoxCount";
             this.lblLootBoxCount.Size = new System.Drawing.Size(90, 13);
             this.lblLootBoxCount.TabIndex = 27;
@@ -585,7 +591,7 @@
             // lblChance
             // 
             this.lblChance.AutoSize = true;
-            this.lblChance.Location = new System.Drawing.Point(208, 313);
+            this.lblChance.Location = new System.Drawing.Point(12, 14);
             this.lblChance.Name = "lblChance";
             this.lblChance.Size = new System.Drawing.Size(13, 13);
             this.lblChance.TabIndex = 28;
@@ -594,7 +600,7 @@
             // lblCommon
             // 
             this.lblCommon.AutoSize = true;
-            this.lblCommon.Location = new System.Drawing.Point(208, 326);
+            this.lblCommon.Location = new System.Drawing.Point(12, 40);
             this.lblCommon.Name = "lblCommon";
             this.lblCommon.Size = new System.Drawing.Size(60, 13);
             this.lblCommon.TabIndex = 28;
@@ -603,7 +609,7 @@
             // lblRare
             // 
             this.lblRare.AutoSize = true;
-            this.lblRare.Location = new System.Drawing.Point(208, 339);
+            this.lblRare.Location = new System.Drawing.Point(12, 53);
             this.lblRare.Name = "lblRare";
             this.lblRare.Size = new System.Drawing.Size(42, 13);
             this.lblRare.TabIndex = 28;
@@ -612,7 +618,7 @@
             // lblUltra
             // 
             this.lblUltra.AutoSize = true;
-            this.lblUltra.Location = new System.Drawing.Point(208, 352);
+            this.lblUltra.Location = new System.Drawing.Point(12, 66);
             this.lblUltra.Name = "lblUltra";
             this.lblUltra.Size = new System.Drawing.Size(67, 13);
             this.lblUltra.TabIndex = 28;
@@ -621,7 +627,7 @@
             // lblLootBoxCookies
             // 
             this.lblLootBoxCookies.AutoSize = true;
-            this.lblLootBoxCookies.Location = new System.Drawing.Point(210, 365);
+            this.lblLootBoxCookies.Location = new System.Drawing.Point(12, 79);
             this.lblLootBoxCookies.Name = "lblLootBoxCookies";
             this.lblLootBoxCookies.Size = new System.Drawing.Size(57, 13);
             this.lblLootBoxCookies.TabIndex = 29;
@@ -630,7 +636,7 @@
             // lblMoney
             // 
             this.lblMoney.AutoSize = true;
-            this.lblMoney.Location = new System.Drawing.Point(56, 427);
+            this.lblMoney.Location = new System.Drawing.Point(246, 14);
             this.lblMoney.Name = "lblMoney";
             this.lblMoney.Size = new System.Drawing.Size(51, 13);
             this.lblMoney.TabIndex = 30;
@@ -670,6 +676,14 @@
             // 
             // tabLootbox
             // 
+            this.tabLootbox.Controls.Add(this.lblLootBoxCount);
+            this.tabLootbox.Controls.Add(this.lblMoney);
+            this.tabLootbox.Controls.Add(this.btnBuyLootBox);
+            this.tabLootbox.Controls.Add(this.lblChance);
+            this.tabLootbox.Controls.Add(this.lblLootBoxCookies);
+            this.tabLootbox.Controls.Add(this.lblCommon);
+            this.tabLootbox.Controls.Add(this.lblUltra);
+            this.tabLootbox.Controls.Add(this.lblRare);
             this.tabLootbox.Location = new System.Drawing.Point(4, 22);
             this.tabLootbox.Name = "tabLootbox";
             this.tabLootbox.Size = new System.Drawing.Size(312, 258);
@@ -681,7 +695,6 @@
             // 
             this.tabDebugAdd.Controls.Add(this.btnLevelUpDebug);
             this.tabDebugAdd.Controls.Add(this.lblLootBoxCost);
-            this.tabDebugAdd.Controls.Add(this.btnBuyLootBox);
             this.tabDebugAdd.Controls.Add(this.btnSisterDebug);
             this.tabDebugAdd.Controls.Add(this.btnBrotherDebug);
             this.tabDebugAdd.Controls.Add(this.textboxSisterDebug);
@@ -724,7 +737,7 @@
             // 
             // btnBuyLootBox
             // 
-            this.btnBuyLootBox.Location = new System.Drawing.Point(136, 190);
+            this.btnBuyLootBox.Location = new System.Drawing.Point(206, 228);
             this.btnBuyLootBox.Name = "btnBuyLootBox";
             this.btnBuyLootBox.Size = new System.Drawing.Size(91, 20);
             this.btnBuyLootBox.TabIndex = 14;
@@ -896,28 +909,31 @@
             this.dataGridView1.Size = new System.Drawing.Size(302, 251);
             this.dataGridView1.TabIndex = 0;
             // 
-            // pictureBox4
+            // pictureBox5
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 14);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(173, 249);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 32;
-            this.pictureBox4.TabStop = false;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(25, 12);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(120, 250);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(32, 4);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(116, 249);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 3;
+            this.pictureBox6.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 601);
-            this.Controls.Add(this.lblMoney);
-            this.Controls.Add(this.lblLootBoxCookies);
-            this.Controls.Add(this.lblUltra);
-            this.Controls.Add(this.lblRare);
-            this.Controls.Add(this.lblCommon);
-            this.Controls.Add(this.lblChance);
-            this.Controls.Add(this.lblLootBoxCount);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.lblLoveValue);
             this.Controls.Add(this.tabControl1);
@@ -946,19 +962,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabFather.ResumeLayout(false);
             this.tabFather.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.lblBrother.ResumeLayout(false);
             this.lblBrother.PerformLayout();
             this.lblSister.ResumeLayout(false);
             this.lblSister.PerformLayout();
             this.tabControl2.ResumeLayout(false);
             this.tabRecipeBook.ResumeLayout(false);
+            this.tabLootbox.ResumeLayout(false);
+            this.tabLootbox.PerformLayout();
             this.tabDebugAdd.ResumeLayout(false);
             this.tabDebugAdd.PerformLayout();
             this.tabDebugInfo.ResumeLayout(false);
             this.tabDebugInfo.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1015,7 +1035,6 @@
         private System.Windows.Forms.Label lblLootBoxCookies;
         private System.Windows.Forms.Label lblMoney;
         private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabRecipeBook;
         private System.Windows.Forms.Button btnNeke;
         private System.Windows.Forms.TabPage tabLootbox;
@@ -1044,6 +1063,8 @@
         private System.Windows.Forms.Label lblMoney2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
 

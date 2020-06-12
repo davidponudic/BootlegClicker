@@ -25,7 +25,7 @@ namespace First_Form_App
         public int cookieCPS, grandmaCPS, grandpaXPS;
         public int grandmalimit = 5, grandpalimit = 5, motherlimit = 1, fatherlimit = 1, brotherlimit = 1, sisterlimit = 1;
         public int cookiemultiplier = 1, grandmamultiplier = 1;
-        public int grandmavalue = 20, grandpavalue = 1000, mothervalue, fathervalue = 1000, brothervalue, sistervalue;
+        public int grandmavalue = 20, grandpavalue = 1000, mothervalue = 1000, fathervalue = 1000, brothervalue = 1000, sistervalue = 1000;
         public int level = 1;
         public int LootBoxCount = 0;
         public int Ultra = 0, Rare = 0, Common = 0, LootBoxMoney = 0, LootBoxMoneyCost = 0;
@@ -38,10 +38,10 @@ namespace First_Form_App
         private bool corgibool = true;
         private bool boolinterval = false;
 
-        
-
+       
 
         Random rnd = new Random();
+
 
         //Cookie button
         private void btnCookies_Click(object sender, EventArgs e)
@@ -52,6 +52,7 @@ namespace First_Form_App
             Score++;
             CookieUpdate();
             TimerStart();
+
         }
 
         //-----------FAMILY BUTTONS-----------//
@@ -141,11 +142,6 @@ namespace First_Form_App
         private void textboxCookieDebug_TextChanged(object sender, EventArgs e)
         {
             debugcookies = Convert.ToInt32(textboxCookieDebug.Text);
-        }
-
-        private void btnFather_Click(object sender, EventArgs e)
-        {
-            FatherBuy();
         }
 
         private void btnBuyLootBox_Click(object sender, EventArgs e)
@@ -374,7 +370,6 @@ namespace First_Form_App
                         LevelLimits();
                         break;
                     case 4:
-
                         barLove.Value = 0;
                         barLove.Maximum = 2800;
                         level++;
