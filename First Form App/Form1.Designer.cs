@@ -54,7 +54,6 @@
             this.lblGrandpaCPS = new System.Windows.Forms.Label();
             this.lblGrandpas = new System.Windows.Forms.Label();
             this.tabMother = new System.Windows.Forms.TabPage();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblMotherCost = new System.Windows.Forms.Label();
             this.btnMother = new System.Windows.Forms.Button();
             this.lblMothers = new System.Windows.Forms.Label();
@@ -106,6 +105,7 @@
             this.tabDebugInfo = new System.Windows.Forms.TabPage();
             this.lblScore = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pnlInv = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -117,7 +117,6 @@
             this.tabGrandpa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabMother.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabFather.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.lblBrother.SuspendLayout();
@@ -287,6 +286,15 @@
             this.tabGrandma.Text = "Grandma";
             this.tabGrandma.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "label1";
+            // 
             // lblGrandmaCPS
             // 
             this.lblGrandmaCPS.AutoSize = true;
@@ -340,6 +348,16 @@
             this.btnGrandpa.Text = "Call grandpa";
             this.btnGrandpa.UseVisualStyleBackColor = true;
             this.btnGrandpa.Click += new System.EventHandler(this.btnGrandpa_Click);
+            // 
+            // btnFather
+            // 
+            this.btnFather.Location = new System.Drawing.Point(183, 230);
+            this.btnFather.Name = "btnFather";
+            this.btnFather.Size = new System.Drawing.Size(123, 23);
+            this.btnFather.TabIndex = 1;
+            this.btnFather.Text = "Call father";
+            this.btnFather.UseVisualStyleBackColor = true;
+            this.btnFather.Click += new System.EventHandler(this.btnFather_Click);
             // 
             // lblGrandpaCost
             // 
@@ -695,6 +713,7 @@
             // 
             this.tabDebugAdd.Controls.Add(this.btnLevelUpDebug);
             this.tabDebugAdd.Controls.Add(this.lblLootBoxCost);
+            this.tabDebugAdd.Controls.Add(this.btnBuyLootBox);
             this.tabDebugAdd.Controls.Add(this.btnSisterDebug);
             this.tabDebugAdd.Controls.Add(this.btnBrotherDebug);
             this.tabDebugAdd.Controls.Add(this.textboxSisterDebug);
@@ -893,7 +912,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.pnlInv);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Size = new System.Drawing.Size(312, 258);
@@ -901,13 +920,12 @@
             this.tabPage1.Text = "Inventory";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // pnlInv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(302, 251);
-            this.dataGridView1.TabIndex = 0;
+            this.pnlInv.Location = new System.Drawing.Point(4, 5);
+            this.pnlInv.Name = "pnlInv";
+            this.pnlInv.Size = new System.Drawing.Size(307, 252);
+            this.pnlInv.TabIndex = 0;
             // 
             // pictureBox5
             // 
@@ -934,6 +952,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 601);
+            this.Controls.Add(this.lblMoney);
+            this.Controls.Add(this.lblLootBoxCookies);
+            this.Controls.Add(this.lblUltra);
+            this.Controls.Add(this.lblRare);
+            this.Controls.Add(this.lblCommon);
+            this.Controls.Add(this.lblChance);
+            this.Controls.Add(this.lblLootBoxCount);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.lblLoveValue);
             this.Controls.Add(this.tabControl1);
@@ -948,6 +973,7 @@
             this.Controls.Add(this.btnCookies);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PesPlant)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PesTable)).EndInit();
             this.tabControl1.ResumeLayout(false);
@@ -1035,6 +1061,7 @@
         private System.Windows.Forms.Label lblLootBoxCookies;
         private System.Windows.Forms.Label lblMoney;
         private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabRecipeBook;
         private System.Windows.Forms.Button btnNeke;
         private System.Windows.Forms.TabPage tabLootbox;
@@ -1059,12 +1086,12 @@
         private System.Windows.Forms.TabPage tabDebugInfo;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblMoney2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Panel pnlInv;
     }
 }
 

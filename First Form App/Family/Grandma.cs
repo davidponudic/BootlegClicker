@@ -7,23 +7,13 @@ using First_Form_App;
 
 namespace First_Form_App.Family
 {
-    /*
-    public class Grandma : Form1
+   /* 
+    public class Grandma 
     {
         int grandmavalue;
-       
-    }
-
-    class GrandmaPrice : Grandma
-    {
-        
-        switch(Form1.grandmas)
-            {
-            case 10:
-            }
+        int številoc;
 
     }
 
     */
-    
 }
